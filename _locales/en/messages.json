@@ -1,0 +1,684 @@
+{
+"small_name": {
+	"message": "m1"
+},
+"you_stop": {
+	"message": "You have stopped the script!"
+},
+"UI_1": {
+	"message": "SINGLE page mode"
+},
+"UI_2": {
+	"message": "Open one of the <b>recommended tabs</b> and choose an option:"
+},
+"UI_3": {
+	"message": "MULTI pages mode"
+},
+"UI_4": {
+	"message": "Set your pages in"
+},
+"UI_5": {
+	"message": "Settings"
+},
+"UI_6": {
+	"message": "and just run the desired option:"
+},
+"UI_7": {
+	"message": "Find more info and change limits on the"
+},
+"UI_8": {
+	"message": "settings page"
+},
+"UI_9": {
+	"message": "Full scan this page (or the opened post)"
+},
+"UI_10": {
+	"message": "Real-time scan newest posts"
+},
+"UI_11": {
+	"message": "Full scan ALL pages"
+},
+"UI_12": {
+	"message": "Real-time scan ALL pages"
+},
+"UI_13": {
+	"message": "Error: You must choose pages to scan. Go to options."
+},
+"pause_1": {
+	"message": "Pause"
+},
+"pause_2": {
+	"message": "seconds before the next loop."
+},
+"pause_3": {
+	"message": "The page will be reloaded"
+},
+"limit_err1": {
+	"message": "Facebook has shown an error. Read it! <b>If you see 'invited too fast' / 'spam limitation'</b>, increase timeouts (how to increase: close the list of people and run the script) and DO NOT use the Facebook at the same time. Try again in 24h. This happens even if you invite manually, after ~24h it should work fine again. Sometimes you have to wait for 2-3 days to reset this. "
+},
+"pages_checked": {
+	"message": "Pages checked:"
+},
+"publ_check_tab": {
+	"message": "Publishing Tools tab:"
+},
+"redirect": {
+	"message": "Redirecting to the Posts tab, run script one more time."
+},
+"total_inv_sent": {
+	"message": "Total invites sent:"
+},
+"posts_checked": {
+	"message": "Posts checked:"
+},
+"do_not_use_anymore": {
+	"message": "Try in 24 hours, FB limit should be reset."
+},
+"total_invited": {
+	"message": "Total invited:"
+},
+"switch_tab_info": {
+    "message": "<span style='color:red'>Do not switch tabs or minimise; the browser may stop the script.</span> Keep 5% of the window visible or use Picture-in-Picture extension."
+},
+"done": {
+	"message": "Done!"
+},
+"start_inv": {
+	"message": "Click to start inviting"
+},
+"descr_inv": {
+	"message": "With a single click, you can scan all posts from your Facebook pages and invite who liked posts to follow your page."
+},
+"paused": {
+	"message": ". Paused (every 40 invites). Resuming in 30 seconds."
+},
+"review": {
+	"message": "Did you find it useful? Please leave a review..."
+},
+"error1": {
+	"message": "ERROR! No posts found! Run the script in Business Suite, Content Management or Publishing Tools tab where the list of posts is shown! If something is wrong, contact me at info@invitelikecomment.com with details and I'll try to help you ;)"
+},
+"facebook_limit_block": {
+	"message": "Error: Facebook popup message shown, read it. If you see an error 'going too fast' or 'anti spam limitation': <b>click on 'let us know' and (important!) report this to Facebook</b>, set timeout 8-10 sec for invites (or 10-15 for comments) and <b>do not use Facebook at the same time</b>. Try again in 24h. This happens rarely even if you invite/scroll manually."
+},
+"after_text1": {
+	"message": "<span style=\"color:green;font-weight:bold;\">Was it useful?</span> if you like my extension, please, <span style=\"color:green;font-weight:bold;\"><b>give it 5 stars and write a nice REVIEW.</b></span> This support me and I’ll work more on new features ;)"
+},
+"after_done": {
+	"message": "Done"
+},
+"after_share": {
+	"message": "Share"
+},
+"after_rate": {
+	"message": "Review"
+},
+"after_scan_posts": {
+	"message": "Scan all posts too"
+},
+"after_scan_comments": {
+	"message": "Scan comments too"
+},
+"after_close": {
+	"message": "Close"
+},
+"pLocN1": {
+	"message": "FREE TRIAL IS OVER!"
+},
+"pLocN2": {
+	"message": "You can invite max %s per day, come back tomorrow or purchase the script"
+},
+"pLocN3": {
+	"message": "License verified"
+},
+"pLocN4": {
+	"message": "Free trial is over, or your license is not active. You can use only the FREE feature: open the list of likers and then start the script, or purchase the paid version."
+},
+"pLocN5": {
+	"message": "License was verified! Please, save it somewhere OR add your email so we can send it to you if you lose it."
+},
+"pLocN6": {
+	"message": "License was verified! In case you lose it, you can restore it using your email."
+},
+"pLocN7": {
+	"message": "Too many requests sent, wait a 30 sec before trying again! Do not use VPN."
+},
+"pLocN8": {
+	"message": "Please insert the license first (you can purchase it on our website). If you lost your license, insert the email you saved when you purchased it."
+},
+"pLocN9": {
+	"message": "Please, check better the license you inserted. It is not correct. If you lost your license - insert the email you saved with it when purchased."
+},
+"pLocN10": {
+	"message": "Please, insert the license code or email if you forgot it but previously connected it to your email."
+},
+"pLocN11": {
+	"message": "Do you want to remove the license from this browser? Click YES/OK"
+},
+"unsupported_language_alert": {
+	"message": "Attention! Your Facebook language (%s) is not supported by the script and it may not work. Please change Facebook language to ENGLISH."
+},
+"too_many_pages_alert": {
+	"message": "%s. You have too many pages, we will trim the list a little."
+},
+"facebook_not_english": {
+	"message": "<span style='color:red;font-weight: bold;'>Attention: Facebook not in English – switch to English if it doesn't work as expected.</span><br>"
+},
+"facebook_not_english_html": {
+	"message": "<span style='color:red;font-weight: bold;'>Attention: Facebook not in English – switch to English if it doesn't work as expected.</span><br>"
+},
+"fast_scan_label": {
+	"message": "<span style='color:green'><b>Fast scan:</b></span>"
+},
+"fast_scan_before": {
+	"message": "skip the post if 0 people were invited after"
+},
+"fast_scan_after":  {
+	"message": "scrolls of the likers' list."
+},
+"fast_scan_title": {
+	"message": "Use this once you have processed all your posts. If the script doesn't find people to invite, it will skip this post and go to the next one."
+},
+"whats_new": {
+	"message": "what's new?"
+},
+"before_running_script": {
+	"message": "BEFORE running the script, find the tab with Invite buttons, it may be (some links may not open):"
+},
+"business_suite": {
+	"message": "Business Suite (Posts&Reels or Feed&Grid tabs)"
+},
+"insights_new": {
+	"message": "Insights (new)"
+},
+"photos_album": {
+	"message": "Photos (open album first)"
+},
+"home_tab": {
+	"message": "Home (link looks like: facebook.com/pagename)"
+},
+"inbox_tab": {
+	"message": "Inbox"
+},
+"inbox_plus_tab": {
+	"message": "Inbox+ (go to comments)"
+},
+"creator_studio": {
+	"message": "Creator Studio (timeline)"
+},
+"notifications_tab": {
+	"message": "<a href=\"https://www.facebook.com/professional_dashboard/content/content_library/\">Professional dashboard</a>, My content (in Groups)"
+},
+"run_script_there": {
+	"message": "And run the script there. We suggest to try more than one tab, sometimes FB may not show some users in some tabs."
+},
+"check_old_video": {
+	"message": "Check the old video example"
+},
+"contact_us_problems": {
+	"message": "If you notice any problems, send us your script version and some screenshots."
+},
+"pause_between_invites": {
+	"message": "Pause between invites"
+},
+"stop_after": {
+	"message": "Stop after"
+},
+"invites_word": {
+	"message": "invites"
+},
+"per_run": {
+	"message": "per run"
+},
+"per_day": {
+	"message": "per day"
+},
+"save_processed_posts": {
+	"message": "Save processed posts"
+},
+"ignore_next_runs": {
+	"message": "and ignore on next runs (in some tabs only)."
+},
+"saved_posts": {
+	"message": "Saved posts:"
+},
+"reset": {
+	"message": "Reset."
+},
+"new_for_big_posts": {
+	"message": "NEW for BIG POSTS:"
+},
+"save_ram": {
+	"message": "SAVE RAM (release processed likers from the RAM)"
+},
+"main_option_invite": {
+	"message": "MAIN option: invite post likers"
+},
+"to_like_page": {
+	"message": "to like your page"
+},
+"trial_next_options_only_mpv": {
+	"message": "Next options are available only in Multi-Pages version:"
+},
+"like_shared_posts": {
+	"message": "Like shared posts"
+},
+"like_comments_shared_posts": {
+	"message": "Like comments on shared posts"
+},
+"invite_likers_shared_posts": {
+	"message": "Invite likers of shared posts"
+},
+"only_shared_by_your_page": {
+	"message": "only shared by your page"
+},
+"invite_who_liked_your_comments": {
+	"message": "Invite who liked comments posted by you on shared posts"
+},
+"new": {
+	"message": "NEW:"
+},
+"comment_all_shared_posts": {
+	"message": "Comment on all shared posts"
+},
+"set_text_at_least_5_chars": {
+	"message": "(set the text, at least 5 chars per phrase)"
+},
+"set_text_link": {
+	"message": "Set text"
+},
+"use_user_name_in_text": {
+	"message": "You can use user's name in the text:"
+},
+"example_user_name_title": {
+	"message": "Example: poster name is Alessandro del Piero. You can use:\n%name1% - to write 'Alessandro del Piero' (full name)\n%name2% - to write 'Alessandro' (first word of the name)\n%name3% - to write 'Piero' (last word of the name)\nExample: Hello, %name2%! Some useful text here."
+},
+"spintax": {
+	"message": "Spintax"
+},
+"spintax_supported": {
+	"message": "is supported!"
+},
+"one_phrase_random": {
+	"message": "If you set more than 1 phrase - one of them will be randomly selected."
+},
+"example": {
+	"message": "Example:"
+},
+"example_comment_text": {
+	"message": "{Hello|Hi}, %name2%, thank you for sharing! :)"
+},
+"pause": {
+	"message": "Pause"
+},
+"after_each_comment": {
+	"message": "after each comment"
+},
+"from": {
+	"message": "from"
+},
+"to": {
+	"message": "to"
+},
+"seconds": {
+	"message": "seconds"
+},
+"how_to_select_few_posts": {
+	"message": "<span style=\"color:red\">how to select just a few posts?</span> Works in Creator Studio for old pages"
+},
+"what_is_difference": {
+	"message": "what is the difference?"
+},
+"full_scan": {
+	"message": "Full scan"
+},
+"full_scan_desc": {
+	"message": "scans ALL posts on the page and then stops"
+},
+"real_time": {
+	"message": "Real-time"
+},
+"real_time_desc": {
+	"message": "by default scans 5 newest posts, takes a pause and starts scanning them again and again"
+},
+"check_video_example": {
+	"message": "Check video example"
+},
+"invites_sent_last_24h": {
+	"message": "Invites sent in the last 24 hours:"
+},
+"invites_sent_last_30d": {
+	"message": "Invites sent in the last 30 days:"
+},
+  "counting_days_only": {
+	"message": "(counting for $1 day(s) only)"
+},
+"profile_page_warning": {
+	"message": "ATTENTION! You are running the script on a profile.php page, which is very old and may not work. Try running the script in a different tab!"
+},
+"too_many_add_friend_buttons": {
+	"message": "Oh, we have a problem!\r\nI see too many \"Add Friend\" buttons. We should see \"Invite\" buttons instead.\r\n\r\nCheck another tab with Invite buttons and run the script there. Can't find them? Are you using the correct profile? Try changing the profile to match your page. Or contact Facebook to enable the Invite feature for your page: https://www.facebook.com/business/help"
+},
+"creator_studio_home_error": {
+	"message": "ERROR! You are in the HOME tab of Creator Studio, no posts here!<br><b>OPEN Creator Studio -> Content Library -> Posts and run the script there. Or any other tab that we support: Home, Notifications, new Business Suite etc</b>"
+},
+"confirm_likers_list": {
+	"message": "We detected that a list is open. If this list contains likers and you want to invite only the likers of this post, click OK. If this is a shared post, click Cancel to proceed with the next step."
+},
+"confirm_shared_posts_scan": {
+	"message": "Shared posts are OPEN. If you want to scan ONLY shared posts now, press OK. If you cancel, we will close shared posts (if possible) and scan the page as usual. Shared posts scanning works in English Facebook only.\r\nThe script will use the next page name (if it is wrong, run in another tab or set settings to post comments with the default profile): %s"
+},"invite_like_disabled": {
+	"message": "ATTENTION: check Settings better, you have disabled Invite and Like features!"
+},
+"only_shared_posts_enabled": {
+	"message": "ATTENTION: You have enabled ONLY shared posts feature. Run extension in Business Suite, Facebook must be in English!"
+},
+"run_in_supported_tabs": {
+	"message": "Attention! We suggest you to run the script in the Business Suite, Publishing tools, Creator Studio, Ads manager tab. If more than 1 post is opened on the same page, script doesn't work well."
+},
+"facebook_notifications_url_warning": {
+	"message": "Attention! Facebook may open posts in a new page and if that happens: change the URL of Notifications page from business.facebook to www.facebook (facebook doesn't have access to the own domain from the business one)"
+},
+"friends_invite_result": {
+	"message": "FRIENDS INVITE: %s of %s friends were invited. Try also to invite fans (who liked your posts)!"
+},
+"inviting_everyone_in_list_full": {
+	"message": "Inviting Everyone in the List (Limit = %s)... %s invited so far..."
+},
+"friends_list_scroll_limit": {
+	"message": "We have a limit of %s scroll tries for this friends list"
+},
+"all_friends_selected_button": {
+	"message": "ALL friends were selected, now you can check the list and click on \"Send Invites\" button (%s)"
+},
+"didnt_find_posts_reload": {
+	"message": ". Error: didn't find posts after reload. Will try to reload the page again in 1 minute. Please wait..."
+},
+"home_tab_no_posts": {
+	"message": "ERROR! You are in the HOME tab of Creator Studio, no posts here! OPEN Creator Studio -> Content Library -> Posts."
+},
+"no_posts_in_content_library": {
+	"message": "ERROR! I don't see posts here! Did you open Content Library -> Posts? Try to run there, also you can click on \"?\" icon and select \"Go back to Publishing tools tab\", in this way you will have access to BOTH tools and can run the script again."
+},
+"no_posts_found_err2": {
+	"message": "ERROR! No posts found! Run the script on Business Suite, Inbox+, Home page or Notifications tabs where list of posts is shown! If something is wrong - contact me by %s with some info and I'll try to help you ;) [err 2]"
+},
+"extension_stopped_shared_posts": {
+	"message": "<span style=\"color:red\">Extension stopped. We were scanning only opened shared posts.</span><br>"
+},
+"extension_stopped_visible_likers": {
+	"message": "<span style=\"color:red\">Extension stopped. We were scanning only list of likers shown on the screen.</span><br>"
+},
+"extension_stopped_fb_popup": {
+	"message": "<span style=\"color:red\">Extension stopped. Facebook popup message was detected.</span><br>"
+},
+"fb_popup_report": {
+	"message": "Error: Facebook popup message shown. <b>Click 'let us know' and report to Facebook</b>, wait 24h and try again. This is a normal limitation, it happens even if you click manually.<br>"
+},
+"daily_limit_zero": {
+	"message": "Check settings -> Daily limit -> Limit for single page. Since you set it to 0, no invites can be sent for this page."
+},
+"pause_before_time": {
+	"message": ".<br>We take a pause (you set in settings) every %s invites for %s minutes (+- 1%). Continue at "
+},
+"reactions_scanned_current": {
+	"message": ". Reactions scanned (only for current reaction): "
+},
+"reactions_scanned": {
+	"message": ". Reactions scanned: "
+},
+"list_scrolled": {
+	"message": ". List was scrolled: "
+},
+"see_more_clicked": {
+	"message": ". ’See more’ button clicked: "
+},
+"not_commented_antispam": {
+	"message": ". NOT commented (antispam): "
+},
+"shared_posts_comments_liked": {
+	"message": ". Shared posts/comments liked: "
+},
+"shared_posts_commented": {
+	"message": ". Shared posts commented: "
+},
+"page_checked_text": {
+	"message": ". Page: $1 (random order)"
+},
+"disabled_in_options": {
+	"message": "DISABLED in options"
+},
+"scrolls": {
+	"message": "Scrolls:"
+},
+"script_scanned_selected_posts": {
+	"message": " Script scanned only posts that you SELECTED. "
+},
+"publishing_tools_tabs_checked": {
+	"message": "Publishing Tools tabs checked:"
+},
+"scrolls_in_creator_studio": {
+	"message": "Scrolls in Creator Studio:"
+},
+"scrolls_in_content_management": {
+	"message": "Scrolls in Content Management:"
+},
+"scrolls_in_business_suite": {
+	"message": "Scrolls in Business Suite:"
+},
+"scrolls_in_new_publishing_tools": {
+	"message": "Scrolls in new Publishing Tools tab:"
+},
+"scrolls_in_inbox": {
+	"message": "Scrolls in Inbox:"
+},
+"shared_posts_liked": {
+	"message": ". Shared posts liked: "
+},
+"reactions_scanned_for_post": {
+	"message": "Reactions scanned for this post:"
+},
+"started_time": {
+	"message": "Script started at"
+},
+"stopped_time": {
+	"message": "Script stopped at"
+},
+"please_give_5_stars": {
+	"message": "Please, give us 5 stars"
+},
+"view_all_scripts": {
+	"message": "View all our scripts"
+},
+"email_me": {
+	"message": "Email me"
+},
+"lc_not_active2": {
+	"message": ">> License NOT active. Click here to manage your license <<"
+},
+"lc_paid_active": {
+	"message": ">> PAID version. Click here to manage your license <<"
+},
+"lc_paid_not_active": {
+	"message": ">> PAID version NOT Active. Click here to manage your license <<"
+},
+"lc_trial_ended": {
+	"message": ">> FREE TRIAL ENDED! Click here to manage your license <<"
+},
+"lc_trial_active": {
+	"message": ">> FREE TRIAL. Click here to manage your license <<"
+},
+"lc_try_3days": {
+	"message": "<b>Try any of our scripts for 3 days for free and then purchase a license on <a href=\"https://www.invitelikecomment.com/en/\" target=\"_blank\">our website</a>.</b>"
+},
+"lc_trial_over": {
+	"message": "<b>Free trial is over, purchase a license on <a href=\"https://www.invitelikecomment.com/en/\" target=\"_blank\">our website</a>.</b>"
+},
+"lc_code_label": {
+	"message": "Your license code:"
+},
+"lc_insert_label": {
+	"message": "Insert the license code (lost it? Use email if you added it previously):"
+},
+"lc_save_button": {
+	"message": "Save"
+},
+"lc_purchase_website": {
+	"message": "<b>You can purchase it on <a href=\"https://www.invitelikecomment.com/en/\" target=\"_blank\">our website</a>.</b>"
+},
+"lc_trial_over2": {
+	"message": "Trial is over"
+},
+"lc_purchase_needed": {
+	"message": "you need to purchase the script to use ALL features."
+},
+"lc_one_post_option": {
+	"message": "Or open the list of likers and run the script to scan only this post."
+},
+"lc_less_than_1_day": {
+	"message": "less than 1 day."
+},
+"lc_days": {
+	"message": "days."
+},
+"lc_trial_active2": {
+	"message": "FREE 3 DAYS TRIAL is now active"
+},
+"lc_try_without_limitations": {
+	"message": "so try the script with limited invites (paid version has no limits)."
+},
+"lc_trial_expires": {
+	"message": "Trial expires in"
+},
+"lc_wrong_script": {
+	"message": "WRONG SCRIPT for this license"
+},
+"lc_license_for": {
+	"message": "This is a license for"
+},
+"lc_download_correct": {
+	"message": "Open"
+},
+"lc_wrong_license_contact": {
+	"message": "and download the correct script. If you purchased a wrong license, send us an email:"
+},
+"lc_check_license_or_contact": {
+	"message": "Check the license you purchased or contact us via email"
+},
+"lc_license_status": {
+	"message": "License status"
+},
+"lc_active": {
+	"message": "ACTIVE"
+},
+"lc_expiring_soon": {
+	"message": "expiring soon"
+},
+"lc_expired": {
+	"message": "EXPIRED"
+},
+"lc_not_active": {
+	"message": "NOT ACTIVE"
+},
+"lc_expire_date": {
+	"message": "Expire date"
+},
+"lc_license_type": {
+	"message": "License type"
+},
+"lc_individual": {
+	"message": "Individual (NO business)"
+},
+"lc_business": {
+	"message": "Business (3 users)"
+},
+"lc_corporate": {
+	"message": "Corporate (10 users)"
+},
+"lc_license_duration": {
+	"message": "License duration"
+},
+"lc_1_month": {
+	"message": "1 month"
+},
+"lc_1_year": {
+	"message": "1 year"
+},
+"lc_2_years": {
+	"message": "2 years"
+},
+"lc_forever": {
+	"message": "Forever"
+},
+"lc_canceled_subscription": {
+	"message": "You have canceled your subscription! If you have any problems with the script - contact us via email:"
+},
+"lc_last_msg_error": {
+	"message": "Last message received from the verification server:"
+},
+"lc_your_code": {
+	"message": "Your license code:"
+},
+"lc_insert_code": {
+	"message": "Insert the license code (lost it? Use email if you added it previously):"
+},
+"lc_add_email": {
+	"message": "Add your email to restore the code if you lose it"
+},
+"lc_enter_email": {
+	"message": "Enter your email:"
+},
+"lc_receive_license": {
+	"message": "Receive email 1 week before the license/subscription expires"
+},
+"lc_receive_news": {
+	"message": "Receive important news about our scripts (rarely, max 2-3 per YEAR!)"
+},
+"lc_never_share_email": {
+	"message": "We will never use, sell, or share your email. The main purpose is to help you restore the code if you lose it."
+},
+"lc_remove_license": {
+	"message": "Remove license"
+},
+"lc_save": {
+	"message": "Save"
+},
+"lc_validating_license": {
+	"message": "We are validating your license. Please wait a few seconds. If it takes too long, try again later. Do not use VPN."},
+"lc_searching_license": {
+	"message": "We are searching for your license..."
+},
+"lc_unknown_error": {
+	"message": "UNKNOWN ERROR: if you see this and didn't receive the email - contact us at: "
+},
+"lc_close_menu": {
+	"message": ">> Click here to CLOSE license menu <<"
+},
+"lc_scanning_post": {
+	"message": ">> Please, wait we are scanning the post in a separate tab <<"
+},
+"lc_server_update_msg": {
+	"message": "FB INVITER: code was updated. Reload the page and try again now. Message from server: "
+},
+"lc_server_update": {
+	"message": "FB INVITER: code was updated. Reload the page and try again now."
+},
+"lc_server_received_msg": {
+	"message": "FB INVITER: Received message from server: "
+},
+"lc_scanning_posts": {
+	"message": "We are scanning your posts..."
+},
+"lc_invite_failed": {
+	"message": "After 3 attempts to press the 'INVITE' button, the server did not accept it. You may have reached the daily limit, or there may be a temporary limitation or lag. Try clicking manually or wait 24h. If you can invite manually, contact us via email (take a full screenshot of this page and include the script version).<br>"
+},
+"phrase_or": {
+	"message": "or"
+},
+"phrase_version": {
+	"message": "version:"
+},
+"facebook_ram_tip":{
+	"message": "💡 <span style=\"color:red\"><b>Tip:</b></span> Facebook can use a lot of RAM. \"Aw, Snap!\" errors (especially on notebooks) usually mean low memory. If you ever get that error - try <b>EDGE browser</b> (it manages ram better) or try to run it in a different place."
+}
+}

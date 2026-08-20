@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html>
+<head><title>Impostazioni</title></head>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="options_mul.css" media="all" />
+<body>
+
+<h1>IMPOSTAZIONI</h1>
+
+
+<main>
+  
+  <input id="tab1" type="radio" name="tabs" checked>
+  <label for="tab1">Multi-Page mode</label>
+  
+  <input id="tab2" type="radio" name="tabs">
+  <label for="tab2">Tempo casuale</label>
+    
+  <input id="tab3" type="radio" name="tabs">
+  <label for="tab3">Filtri</label>
+    
+  <input id="tab4" type="radio" name="tabs">
+  <label for="tab4">Post condivisi</label>
+  
+  <input id="tab5" type="radio" name="tabs">
+  <label for="tab5">Limite giornaliero e altro</label>
+
+  
+<section id="content1">
+<h2>Come funziona?</h2>
+<p>
+<b>Full scan di questa pagina</b> - apri le schede supportate (vedi la lista all’avvio dello script) e usa questa opzione. Aprirà automaticamente tutti i post di questa pagina e inviterà tutti.
+<br><b>Real-time scan dei post più recenti</b> - apri le schede supportate (vedi la lista all’avvio dello script) e usa questa opzione. Aprirà automaticamente gli ultimi X post (default 5) di questa pagina, inviterà tutti e poi ricomincerà dopo X minuti, puoi impostarlo su questa pagina.
+<br><b>Modalità MULTI pages</b> - ha le stesse opzioni, la differenza è che puoi scegliere più pagine e l’extension le controllerà tutte. Funziona nelle schede Business Suite (importa automaticamente le tue pagine) oppure inserisci manualmente la lista di link (esempio link al Business Suite delle tue pagine). Oppure puoi aprire Creator Studio, CARICARE tutti i post delle pagine che vuoi e usare lo script in modalità singola per processare tutti i post mostrati.
+</p>
+
+<h2>Da sapere:</h2>
+<p>
+1. L’extension trova i pulsanti dai loro nomi, ma <b>a volte Facebook cambia il design o i nomi dei pulsanti</b>. Aggiorno spesso l’extension, quindi <b>se qualcosa smette di funzionare, per favore scrivimi un’email</b>. Di solito, <b>lo sistemo lo stesso giorno</b>. 🙂
+<br>2. <b>Full scan o Real-time scan si fermano inaspettatamente?</b> Google ha un bug in una nuova versione di Chrome. Se hai installato lo script su 2 PC e la Sync è attiva, potrebbe sincronizzare variabili vuote su un altro PC dove lo script è in esecuzione e causare problemi. Disattiva la Sync se usi lo script su più di 1 PC.
+<br>3. <b>Per post con molte reazioni:</b> il modo migliore è aprire la lista delle persone che hanno reagito a quel post e poi avviare lo script. Lo script lo riconoscerà e chiederà se vuoi scansionare solo questo post — clicca Yes. Se lo script si ferma prima della fine, non chiudere la lista — riavvialo e continuerà. Puoi anche provare l’opzione SAVE RAM, utile per post molto grandi.
+</p>
+
+<h2>Importante – come lavorare mentre lo script gira:</h2>
+Il browser può bloccare le extension se la pagina non è visibile. Ciò significa che lo script non può scrollare o cliccare se la pagina è in background. Fai uno di questi:
+<br>1. Lascialo sul secondo monitor o apri un’altra finestra che copre circa il 95% dello schermo, <a href="#" id="imgInfoShow1"><span style="color:red">clicca qui per vedere/nascondere l’esempio</span></a>
+<img id="img-select" style="display:none;width:100%" src="/page_must_be_visible.jpg">
+<br>2. Scarica qualsiasi estensione con funzione “Picture-in-picture”. Creano una piccola finestra popup per la scheda, così puoi continuare a lavorare.
+
+<h2>Impostazioni modalità Multi-Page</h2>
+<p>
+Se hai Creator Studio, puoi usarlo per selezionare le pagine che vuoi e caricare post da pagine diverse. In questo caso, non serve più usare la funzione Multi-Page. 🙂
+<br>
+Per usare lo script in modalità Multi-Page, <b>seleziona le pagine che vuoi controllare</b> (un link per riga), oppure clicca il pulsante Import.
+</p>
+<label style="display:none"><input type="checkbox" id="multi_notif_page" checked>
+Invece di usare la scheda Publishing Tools, esegui nella scheda Notifications (utile per run in tempo reale, ma potrebbe non funzionare su alcune pagine dove Notifications non funzionano).
+</label>
+<br>
+<label><input type="checkbox" id="multi_random_order">
+Apri le pagine in ordine casuale (non consigliato).
+</label>
+<br><br>
+
+<a href="https://www.facebook.com/bookmarks/pages?fb-auto-invite=1"><button style="margin-bottom:5px;">Importa automaticamente link di tutte le pagine</button></a>
+<p>
+Inserisci gli URL di tutte le tue pagine e/o post, uno per riga. (Oppure usa il <b>pulsante Import</b>)
+<br><b>Il pulsante Import non funzionerà se hai pagine che richiedono il cambio profilo per aprirle.
+In quel caso, apri le pagine in Business Suite → Feed e Grid, e copia manualmente l’URL di ciascuna pagina.</b>
+<br><span style="color:red"><b>Assicurati che l’URL contenga l’ID della pagina — senza di esso, Facebook potrebbe aprire una pagina casuale.</b> Esempio di URL corretto:<br>https://business.facebook.com/latest/posts/feed_and_grid?<b>page_id=XXXXXXXXXX&asset_id=XXXXXXXXXX</b></span>
+<br>Oppure dalla scheda Insights: https://business.facebook.com/latest/insights/content?<b>page_id=XXXXXXXXXX&asset_id=XXXXXXXXXX</b> (includi sempre gli ID).
+<br><b>Aggiornamento 2025.06.10:</b> Ora puoi anche inserire singoli post nella lista, ad esempio: https://www.facebook.com/NOMEPAGINA/posts/longpostid
+</p>
+<table width="100%">
+<tr><td width="50%">
+<b>Run normale</b>
+</td><td width="50%">
+<b>Run Real-Time</b>
+</td></tr><tr><td>
+<textarea name="urllist1" id="urllist1" rows="10" style="width:95%;">
+</textarea>
+</td><td>
+<textarea name="urllist2" id="urllist2" rows="10" style="width:95%;">
+</textarea>
+</td></tr><tr>
+<td>
+Il run normale è più semplice, basta avviare l’extension e controllerà i post di tutte le pagine. Se hai molti post, limita il controllo, altrimenti serve molto tempo per scansionare TUTTI i post.
+<br>
+Controlla solo i primi <input name="normal_run_limitposts" value="100" type="number" min="1" max="200"> post (1-150).
+<br>
+NUOVO: se non trovi inviti dopo aver processato <input name="normal_run_limitNoInvGoNextPage" value="100" type="number" min="1" max="200"> post, vai alla pagina successiva.
+</td>
+<td>
+Quali post vuoi controllare per ogni pagina (esempio, 5 post più recenti: 1,2,3,4,5): <input name="loop_PostsList" value="1,2,3,4,5"> (solo post visibili, non scrolliamo la pagina)
+<br>
+Pausa in minuti prima del prossimo loop (scan): <input name="loop_Pause" value="5" type="number" min="1" max="200">
+<!--<br>
+<label><input type="checkbox" id="notloadtoomuch">Se dopo aver caricato 50 pulsanti su un post non c’era alcun pulsante Invita disponibile - non premere più 'Load more', vai al prossimo post (risparmia molta RAM).</label><br><br>
+-->
+</td>
+</tr>
+</table>
+<p>
+<span style="color:green"><b>Puoi anche aggiungere link diretti ai post.</b></span>
+<br>
+<!--
+<b>Come aggiungere un link diretto a un post pubblicato?</b> Vai al post che ti piace e clicca sulla data, poi copia e incolla il link qui.
+<br><img src="instructions_1.png">
+<br>
+<b>Come aggiungere un link pubblicitario (dark post)?</b> Vai su <a href="https://business.facebook.com/content_management" target="_blank">https://business.facebook.com/content_management</a> poi Ads => scegli la pagina => copia e incolla il link nella lista delle pagine processate e lo script lo scannerà!
+<br>
+<b><span style="color:red;"><b>NUOVO (Feb 2019):</b></span> supportiamo anche link di Creator Studio, singoli post/video/foto, basta aggiungerli così:</b>
+<br>https://www.facebook.com/bestofcinqueterre/<b>posts</b>/1648279192153465
+-->
+</p>
+<p>
+Altre opzioni saranno aggiunte in futuro. Hai bisogno di qualcosa? Scrivimi un’email :)<br>
+</p>
+
+
+  </section>
+
+  <section id="content2">
+<p>
+<b>Per sembrare più una persona reale, abbiamo bisogno di un ritardo casuale.</b> Scegli 2 numeri, e lo script userà un numero casuale (millisecondi) tra di essi per ogni click.
+<br><span style="color:red">Importante: se inviti troppo velocemente, Facebook può bloccare gli inviti per 24 ore. Il valore minimo dovrebbe essere almeno 2 secondi.</span> Le impostazioni di default vanno bene, ma se Facebook ti limita per 1 giorno, aumenta il tempo a 3 secondi o più. <b>Non usare Facebook mentre lo script è in esecuzione!</b>
+</p>
+<div id="status1" style="color:red;font-weight:bold;"></div>
+<b>Pausa casuale dopo ogni invito</b> tra 
+<select id="p1_1"><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="8">8</option><option value="13">13</option><option value="18">18</option><option value="30">30</option><option value="50">50</option><option value="80">80</option><option value="150">150</option><option value="180">180</option></select> e <select id="p1_2"><option value="2.5">2.5</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="7">7</option><option value="8">8</option><option value="10">10</option><option value="15">15</option><option value="22">22</option><option value="35">35</option><option value="55">55</option><option value="75">75</option><option value="90">90</option><option value="150">150</option><option value="180">180</option></select> secondi.
+<br>
+<label><input type="checkbox" id="additional_script_pause">Aggiungi una pausa di 30 secondi ogni 40 inviti (o like/commenti).</label>
+<br><br>
+<b>Scrolla la lista delle persone che hanno messo Like al post <input name="scroll_before_inv_nr" value="0" type="number" min="0" max="999"> volte prima di invitare.</b> Se ricevi limiti spesso, prova questa opzione.
+<br>Aggiungi un ritardo di <input name="fb_limit_show_more_btn_add_sec" value="0" type="number" min="1" max="600"> secondi tra uno scroll e l’altro.
+</section>
+    
+<section id="content3">
+<b>Opzionale:</b>
+<br>
+<!--<label><input type="checkbox" id="check_post_first" checked>Se c’è un post aperto - controlla prima i suoi Like.</label>
+<br>-->
+<label><input type="checkbox" id="skip_like_emotion">Non invitare persone che hanno usato la reazione <img src="/fbicons/react_like.png"> Like.</label>
+<br><label><input type="checkbox" id="skip_love_emotion">Non invitare persone che hanno usato la reazione <img src="/fbicons/react_love.png"> Love.</label>
+<br><label><input type="checkbox" id="skip_haha_emotion">Non invitare persone che hanno usato la reazione <img src="/fbicons/haha.png"> Haha.</label>
+<br><label><input type="checkbox" id="skip_wow_emotion">Non invitare persone che hanno usato la reazione <img src="/fbicons/react_wow.png"> Wow.</label>
+<br><label><input type="checkbox" id="skip_sad_emotion">Non invitare persone che hanno usato la reazione <img src="/fbicons/sad.png"> Sad.</label>
+<br><label><input type="checkbox" id="skip_angry_emotion">Non invitare persone che hanno usato la reazione <img src="/fbicons/angry.png"> Angry.</label>
+
+<br><br><label style="display:none;"><input type="checkbox" id="like_other_pages">Se qualche pagina mette Like al mio post, premi automaticamente il pulsante "LIKE" (non invita la pagina, semplicemente metti Like).</label>
+
+<br><br>
+<span style="color:red;">NUOVO!</span> Per default, lo script scansiona la scheda 'All' (dove tutte le reazioni sono mostrate insieme). Puoi anche scansionare ogni scheda di reazione separatamente. Nota: questa opzione può smettere di funzionare quando Facebook cambia le icone delle reazioni - lo sistemiamo nel prossimo aggiornamento:
+<br><label><input type="checkbox" id="scan_reactions_tabs_more1">Scansiona chi ha messo Like ai post in schede separate (Like, Love, Haha, ecc.) se il post ha più di 1000 reazioni.</label>
+<br><label><input type="checkbox" id="scan_reactions_tabs">Scansiona sempre i liker dei post in schede separate (verranno usati filtri per le reazioni). Questa opzione richiede più tempo.</label>
+<br>Quando inviti amici (o follower della pagina a un gruppo): salta i primi <input name="friends_skip_nr" value="0" type="number" min="0" max="5000"> utenti nella lista e non selezionarli. Questo può aiutare se alcuni utenti non possono essere invitati a causa di un bug.
+<br><br>
+
+<b>Vuoi saltare alcuni nomi particolari?</b> Vuoi saltare persone di un altro continente? Crea una lista di nomi/lettere da saltare (separati da virgola): <input name="name_comm_filter1" value="" type="text" style="width: 500px;">
+<br>Oppure, <input type="checkbox" id="accept_ashii_names_only"><label for="accept_ashii_names_only"><b>invita solo utenti con nomi scritti solo con caratteri ASCII</b> (nomi con lettere come à, ä, è, ó, ы, 漢, ف, ecc. verranno saltati).</label>
+<br><label><input type="checkbox" id="skip_no_profile_image">Non invitare persone senza <img src="no_profile_image.jpg"> immagine profilo.</label>
+
+<br>
+</section>
+
+  <section id="content4">
+  <p>
+<label><input type="checkbox" id="share_put_likes"><span style='color:green'><b>Controlla i post condivisi e metti automaticamente Like</b></span>. Questa funzione funziona solo se esegui l’estensione nella <b>scheda Publishing Tools (migliore opzione) o Creator Studio o Content Management</b>.</label>
+<br>Se metti troppi Like, Facebook potrebbe mostrare un captcha. Puoi limitare il numero di Like per esecuzione qui: <input name="share_likes_limit" value="300" type="number" min="1" max="5000">. Usa gli stessi timeout degli inviti.
+
+<br><br><b>Non è possibile commentare i post condivisi a causa di limitazioni di Facebook dal 2021.</b>
+
+<br><br><label><input type="checkbox" id="stop_on_captcha_shown">Interrompi se appare un captcha (BETA). Questa opzione necessita di ulteriori test – negli ultimi 6 mesi non ho visto captcha.</label>
+<br><br><b>Aggiornamento maggio 2026:</b> Facebook ha cambiato il design e non è più possibile aprire automaticamente i post condivisi. Tuttavia, se apri manualmente l’elenco e poi esegui lo script, funzionerà. Il link delle condivisioni ha questo formato: https://www.facebook.com/shares/view?id=XXXXXXXXXXXXXXXX
+<div style="display:none;">
+<br><br>
+<b>Scansione pagine nella scheda Notifications (nuova UI di fb)</b>: stiamo cercando di aggiungere supporto per scansionare le notifiche. Attualmente funziona (NO post condivisi), ma dobbiamo saltare notifiche su gruppi e condivisioni. <input name="elemSkipInNotificationsTab" value=".sx_e9b3e2,.sx_848308" type="text" style="width: 300px;">
+</div>
+</section>
+    
+<section id="content5">
+<p>
+Facebook assegna a ogni persona un limite di inviti. Solitamente, puoi inviare circa <b>500 inviti al giorno o ogni poche ore</b>.  
+Questo numero cambia in base a quanti inviti sono stati accettati e quanti ne hai inviati nell’ultima settimana o mese.  
+Qui puoi impostare un limite — quando questo limite è raggiunto, l’estensione si fermerà automaticamente.  
+Una volta raggiunto il limite, attendi 3–4 ore e riprova.  
+Puoi anche usare un altro profilo che gestisce la stessa pagina per inviare più inviti nello stesso giorno.
+</p>
+
+Limite per una singola esecuzione (tutte le pagine, totale):
+<input name="fb_limit" value="490" type="number" min="1" max="5000">
+
+<br>
+Limite per singola pagina (usato solo in modalità Multi-Pages):
+<input name="fb_limit_multi" value="490" type="number" min="1" max="5000">
+
+<br>
+A Facebook non piace quando clicchiamo troppi pulsanti “Mostra altro” (o scrolliamo troppe volte nella lista).  
+Meglio non cliccare più di 200 volte per post (normalmente le persone arrivano solo a circa 50 manualmente).  
+Non cliccare (scrollare) più di
+<input name="fb_limit_show_more_btn" value="199" type="number" min="1" max="5000">
+volte per post.
+
+<br>
+<label>
+  <input type="checkbox" id="try_after_limit">
+  Multi-Pages:
+</label>
+Se il limite di Facebook è raggiunto su una pagina, passa alla pagina successiva e prova a invitare anche lì.  
+Di solito funziona, ma non sempre.
+
+<br>
+<label>
+  <input type="checkbox" id="pauseAfterLimit">
+  Pausa extra:
+</label>
+Ogni
+<input name="pauseAfterLimit3" value="50" type="number" min="1" max="5000">
+inviti, fai una pausa di
+<input name="pauseAfterLimit2" value="180" type="number" min="0" max="5000">
+minuti.  
+(Puoi usare questa opzione per far funzionare lo script 24 ore non-stop — basta aumentare il limite totale così non si ferma a 490!)
+
+<br><br>
+
+<label style="display:none;">
+  <input type="checkbox" id="skip_Invite">
+  <span style="color:red">
+    <span style="color:green">
+      <b>DISABILITA funzione Inviti.</b>
+      Usa questa opzione se hai più di 100.000 like o vuoi processare solo i post condivisi.
+    </span>
+    L’estensione NON invierà inviti, ma può mettere Like automaticamente a tutti i post condivisi (controlla l’opzione sopra).
+  </span>
+</label>
+
+<br>
+<span style="color:green"><b>Vuoi saltare alcuni post?</b></span>
+Apri la scheda Publishing Tools — ci sono 25 post per pagina.  
+Apri la pagina che vuoi e avvia l’estensione lì.  
+Se vuoi comunque saltare alcuni post su quella pagina, scrivi il numero qui (salvato solo per una esecuzione):
+<input name="skip_post_setting" value="0" type="number" min="0" max="25">
+(1–24 o qualsiasi numero se esegui lo script nella scheda Photos)
+
+<br><br>
+
+<span style="color:green"><b>Aggiornamento scansione Business Suite (ottobre 2021):</b></span>
+Quando si scansiona in Business Suite, alcune pagine non possono aprire i post nella stessa scheda (bug di Facebook).  
+In quel caso, lo script li apre in una nuova scheda — ma potrebbe non funzionare per te.  
+Se la tua pagina può aprire la lista dei liker nella stessa scheda, abilita questa opzione:
+<label>
+  <input type="checkbox" id="scan_current_tab_business_suite">
+  scansiona i post nella scheda corrente
+</label>
+
+<br><br>
+
+<label>
+  <input type="checkbox" id="slow_internet">
+  <span style="font-weight: normal;">
+    <span style="color:green"><b>INTERNET LENTO</b></span>.
+    Normalmente, quando scansioniamo molte pagine o usiamo la scansione real-time, lo script aspetta fino a 30 secondi per caricare la pagina.  
+    Se ci mette di più, lo script si ferma.  
+    Con questa opzione, il tempo di attesa aumenta a 3 minuti.  
+    Questo può influire anche sulle nuove funzionalità aggiunte in futuro.
+  </span>
+</label>
+
+<br>
+
+<label>
+  <input type="checkbox" id="debug_option">
+  <span style="font-weight: normal;">
+    <span style="color:green"><b>DEBUG</b></span>.
+    Se qualcosa non funziona e non riusciamo a trovare il motivo, abilita questa opzione.  
+    Lo script mostrerà info nella console — puoi copiarle e inviarle al supporto.
+  </span>
+</label>
+
+<br>
+
+<label style="display:none;">
+  <input type="checkbox" id="notif_other_tab">
+  <span style="font-weight: normal;">
+    <span style="color:green"><b>Mostra notifica</b></span>
+    nella scheda o finestra corrente quando lo script si ferma in un’altra scheda o finestra e non te ne accorgi dopo 15 secondi.  
+    (DISABILITATO — non funziona al momento).
+  </span>
+</label>
+</section>
+
+<br>
+<hr>
+<br>
+<div id="status" style="color:red;font-weight:bold; display:none;">
+  Opzioni salvate. Riavvia Facebook.
+</div>
+
+<button style="padding: 10px 20px;" id="save">Salva Impostazioni</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button style="padding: 10px 20px;" id="reset">Ripristina default</button>
+
+<p>
+<br>
+<span style="color:red;"><b>Visita il nostro sito per vedere più script!</b></span> Puoi aggiornare a <b>FULL PACK e avere accesso a tutti i nostri script</b> + ai nostri progetti futuri gratuitamente.
+<br><b>Il nostro sito:</b> <a href="https://www.invitelikecomment.com/" target="_blank">https://www.invitelikecomment.com/</a>
+<br>Guarda il vecchio video esempio per questo script: <a href="https://www.youtube.com/watch?v=FUU_-N2Adec" target="_blank">https://www.youtube.com/watch?v=FUU_-N2Adec</a>
+</p>
+
+    
+</main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div style="display:none;">
+<h2>Impostazioni avanzate</h2>
+<p>Questi numeri sono stati testati, quindi è meglio non cambiarli, ma puoi farlo se vuoi.
+</p>
+Attendere che la finestra dei Like da invitare sia caricata prima del primo click (millisecondi): <input name="fb_timeout_1" value="4000" type="number" min="1000" max="100000"><br>
+Attendere quando si tenta di caricare più Like per la finestra corrente (millisecondi): <input name="fb_timeout_2" value="2000" type="number" min="1000" max="100000"><br>
+Attendere prima di aprire il post successivo dopo aver chiuso quello corrente: <input name="fb_timeout_3" value="1500" type="number" min="1000" max="100000"><br>
+Attendere dopo che la pagina è stata scrollata per caricare altri post: <input name="fb_timeout_4" value="7000" type="number" min="1000" max="100000">, dopo 20 post serve più timeout perché la pagina è troppo grande: <input name="fb_timeout_5" value="10000" type="number" min="1000" max="100000">, dopo 40 post serve molto più timeout perché la pagina è enormemente più grande: <input name="fb_timeout_6" value="15000" type="number" min="1000" max="100000"><br><br>
+<br>
+* 1000 millisecondi = 1 secondo. Timeout minimo: 1000 millisecondi. Timeout massimo: 100 secondi.
+</div>
+
+
+
+
+
+<script src="options_mul.js"></script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+"background": {
+ "service_worker": "background.js"
+},
+"action": {
+  "name": "__MSG_start_inv__"
+},
+"default_locale": "en",
+"description": "__MSG_descr_inv__",
+"homepage_url": "https://www.invitelikecomment.com/",
+"icons": {
+  "128": "icons/icon128.png",
+  "16": "icons/icon16.png",
+  "48": "icons/icon48.png"
+},
+"manifest_version": 3,
+"name": "Invite fans and post likers in Facebook™",
+"options_page": "options.html",
+"permissions": [ "storage", "activeTab", "scripting", "alarms" ],
+"host_permissions": [ "https://*.facebook.com/*" ],
+"version": "2026.05.10",
+"web_accessible_resources": [
+{
+  "resources": [ "content.css", "fonts/roboto-latin-400.woff2", "fonts/roboto-latin-700.woff2", "options.html", "comment_sender.js", "postTextNow.js","forceReload.js", "how-to-select-posts.png" ],
+  "matches": [ "https://*.facebook.com/*" ]
+}
+]
+}

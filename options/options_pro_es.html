@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head><title>Opciones</title></head>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="options_pro.css" media="all" />
+<body>
+
+<h1>OPCIONES</h1>
+
+
+<main>
+  
+  <input id="tab1" type="radio" name="tabs" checked>
+  <label for="tab1">Tiempos aleatorios</label>
+    
+  <input id="tab2" type="radio" name="tabs">
+  <label for="tab2">Filtros de invitación</label>
+    
+  <input id="tab3" type="radio" name="tabs">
+  <label for="tab3">Posts compartidos</label>
+  
+  <input id="tab4" type="radio" name="tabs">
+  <label for="tab4">Límites diarios</label>
+
+  
+<section id="content1">
+<p>
+<b>Para parecer más natural, necesitamos un pequeño retraso aleatorio.</b> Elige 2 números y el script usará un número aleatorio (milisegundos) entre ellos para cada clic.
+<br><span style="color:red">Importante: si invitas demasiado rápido, Facebook puede bloquear las invitaciones durante 24 horas. El valor mínimo debe ser de al menos 2 segundos.</span> Los valores por defecto son buenos, pero si Facebook te limita por 1 día, aumenta el tiempo a 3 segundos o más. <b>No uses Facebook mientras el script está funcionando.</b>
+</p>
+<div id="status1" style="color:red;font-weight:bold;"></div>
+<b>Pausa aleatoria después de cada invitación</b> entre 
+<select id="p1_1"><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="8">8</option><option value="13">13</option><option value="18">18</option><option value="30">30</option><option value="50">50</option><option value="80">80</option><option value="150">150</option><option value="180">180</option></select> y <select id="p1_2"><option value="2.5">2.5</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="7">7</option><option value="8">8</option><option value="10">10</option><option value="15">15</option><option value="22">22</option><option value="35">35</option><option value="55">55</option><option value="75">75</option><option value="90">90</option><option value="150">150</option><option value="180">180</option></select> segundos.
+<br>
+<label><input type="checkbox" id="additional_script_pause">Añadir una pausa de 30 segundos después de cada 40 invitaciones (o likes/comentarios).</label>
+<br><br>
+<b>Hacer scroll en la lista de personas que dieron like al post <input name="scroll_before_inv_nr" value="0" type="number" min="0" max="999"> veces antes de invitar.</b> Si recibes límites a menudo, prueba esta opción.
+<br>Añadir un retraso de <input name="fb_limit_show_more_btn_add_sec" value="0" type="number" min="1" max="600"> segundos entre cada scroll.
+
+
+
+
+<br><br><br>
+
+<h2>Importante:</h2>
+<p>
+1. La extensión encuentra los botones por sus nombres, pero <b>a veces Facebook cambia su diseño o los nombres de los botones</b>. Actualizo la extensión a menudo, así que <b>si algo deja de funcionar, envíame un email</b>. Normalmente, <b>lo arreglo el mismo día</b>.
+<br>2. <b>Para posts con muchas reacciones:</b> lo mejor es abrir la lista de personas que reaccionaron a ese post y luego iniciar el script. El script lo detectará y preguntará si quieres escanear solo ese post — pulsa Sí. Si el script se detiene antes de terminar, no cierres la lista — solo inícialo de nuevo y continuará. También puedes probar la opción GUARDAR RAM, ayuda con posts muy grandes.
+</p>
+
+
+<h2>Importante – cómo seguir trabajando mientras el script funciona:</h2>
+El navegador puede detener extensiones si la página no está visible. Eso significa que el script no puede hacer scroll o clic si la página está en segundo plano. Haz una de estas cosas:
+<br>1. Déjala en el segundo monitor o abre otra ventana que cubra el 95% de tu pantalla, <a href="#" id="imgInfoShow1"><span style="color:red">haz clic aquí para ver/ocultar el ejemplo</span></a>
+<img id="img-select" style="display:none;width:100%" src="/page_must_be_visible.jpg">
+<br>2. Instala cualquier extensión con función “Picture-in-picture”. Estas crean una pequeña ventana emergente para la pestaña, así puedes seguir trabajando.
+
+
+  </section>
+    
+  <section id="content2">
+    <b>Opcional:</b>
+<br>
+<!--<label><input type="checkbox" id="check_post_first" checked>Si hay un post abierto - comprobar primero sus likes.</label>
+<br>-->
+<label><input type="checkbox" id="skip_like_emotion">No invitar a personas que usaron la reacción <img src="/fbicons/react_like.png"> like.</label>
+<br><label><input type="checkbox" id="skip_love_emotion">No invitar a personas que usaron la reacción <img src="/fbicons/react_love.png"> love.</label>
+<br><label><input type="checkbox" id="skip_haha_emotion">No invitar a personas que usaron la reacción <img src="/fbicons/haha.png"> haha.</label>
+<br><label><input type="checkbox" id="skip_wow_emotion">No invitar a personas que usaron la reacción <img src="/fbicons/react_wow.png"> wow.</label>
+<br><label><input type="checkbox" id="skip_sad_emotion">No invitar a personas que usaron la reacción <img src="/fbicons/sad.png"> sad.</label>
+<br><label><input type="checkbox" id="skip_angry_emotion">No invitar a personas que usaron la reacción <img src="/fbicons/angry.png"> angry.</label>
+<br><br>
+<span style="color:red;">¡NUEVO!</span> Por defecto, el script escanea la pestaña “Todos” (donde se muestran todas las reacciones juntas). También puedes escanear cada pestaña de reacciones por separado. Nota: esta opción puede dejar de funcionar si Facebook cambia los iconos — lo corregimos en la siguiente actualización:
+<br><label><input type="checkbox" id="scan_reactions_tabs_more1">Escanear likers en pestañas separadas (Like, Love, Haha, etc.) si el post tiene más de 1000 reacciones.</label>
+<br><label><input type="checkbox" id="scan_reactions_tabs">Siempre escanear likers en pestañas separadas (se usarán los filtros de reacciones). Esta opción tarda más tiempo.</label>
+<br>Al invitar amigos (o seguidores de página a un grupo): saltar a las primeras <input name="friends_skip_nr" value="0" type="number" min="0" max="5000"> personas de la lista y no seleccionarlas. Esto puede ayudar si algunos usuarios no pueden ser invitados por un error.
+
+<br>
+  </section>
+  
+  
+  <section id="content3">
+
+<label><input type="checkbox" id="share_put_likes"><span style='color:red'><b>Extra.</b></span> <span style='color:green'><b>Revisar las publicaciones compartidas y poner “Me gusta” automáticamente</b></span>. Esta función solo funciona si usas la extensión en la pestaña <b>Herramientas de publicación (recomendado) o en business.facebook.com → Publicaciones de la página (para dark posts)</b>.</label>
+<br>Si pones demasiados “Me gusta”, Facebook puede mostrar un captcha. Puedes limitar el número de “Me gusta” por ejecución aquí: <input name="share_likes_limit" value="100" type="number" min="1" max="5000">. Usa los mismos tiempos de espera que para las invitaciones.
+<br><label><input type="checkbox" id="stop_on_captcha_shown">Parar si aparece un captcha (BETA). Esta opción necesita más pruebas – no he visto un captcha en los últimos 6 meses.</label>
+
+</section>
+    
+<section id="content4">
+<p>
+Facebook da a cada persona un límite de invitaciones. Normalmente puedes enviar unas <b>500 invitaciones al día o cada pocas horas</b>. El número cambia según cuántas invitaciones fueron aceptadas y cuántas enviaste en la última semana o mes.  
+Aquí puedes poner un límite — cuando se alcance, la extensión se parará de forma automática.  
+Cuando llegues al límite, espera 3–4 horas e inténtalo de nuevo.  
+También puedes usar otro perfil que gestione la misma página para enviar más invitaciones el mismo día.
+</p>
+
+Límite para una ejecución:
+<input name="fb_limit" value="490" type="number" min="1" max="5000">
+
+<br>
+A Facebook no le gusta que hagamos demasiados clics en “Mostrar más” (o que hagamos demasiado scroll en la lista).  
+Es mejor no hacer más de 200 clics por publicación (normalmente una persona solo llega a unos 50 manualmente).  
+No hacer clic (scroll) más de
+<input name="fb_limit_show_more_btn" value="199" type="number" min="1" max="5000">
+veces por publicación.
+
+<br><br>
+
+<label style="display:none;">
+  <input type="checkbox" id="skip_Invite">
+  <span style="color:red">
+    <span style="color:green">
+      <b>DESACTIVAR invitaciones.</b> Úsalo si tienes más de 100.000 “Me gusta” o si quieres procesar solo publicaciones compartidas.
+    </span>
+    La extensión NO enviará invitaciones, pero puede dar “Me gusta” automáticamente a todas las publicaciones compartidas (activa la opción arriba).
+  </span>
+</label>
+
+<br>
+<span style="color:green"><b>¿Quieres saltarte algunas publicaciones?</b></span>
+Abre la pestaña Herramientas de publicación — hay 25 publicaciones en cada página.  
+Abre la página que quieras e inicia la extensión allí.  
+Si aún quieres saltarte algunas publicaciones en esa página, escribe el número aquí (se guarda solo para una ejecución):
+<input name="skip_post_setting" value="0" type="number" min="0" max="25">
+(1–24 o cualquier número si usas el script en la pestaña Fotos)
+
+<br><br>
+
+<span style="color:green"><b>Actualización del escaneo en Business Suite (oct 2021):</b></span>
+Al escanear en Business Suite, algunas páginas no pueden abrir publicaciones en la misma pestaña (error de Facebook).  
+En ese caso, el script las abre en una nueva pestaña — pero puede que no funcione para ti.  
+Si tu página puede abrir la lista de personas a las que les gusta en la misma pestaña, activa esta opción:
+<label>
+  <input type="checkbox" id="scan_current_tab_business_suite">
+  escanear publicaciones en la misma pestaña
+</label>
+
+<br><br>
+
+<label>
+  <input type="checkbox" id="slow_internet">
+  <span style="font-weight: normal;">
+    <span style="color:green"><b>Internet LENTO</b></span>.
+    Normalmente, cuando escaneas muchas páginas o usas el escaneo en tiempo real, el script espera hasta 30 segundos para cargar la página.
+    Si tarda más, el script se para.  
+    Con esta opción, el tiempo de espera aumenta a 3 minutos.  
+    Esto también puede afectar funciones nuevas en el futuro.
+  </span>
+</label>
+
+<br>
+
+<label>
+  <input type="checkbox" id="debug_option">
+  <span style="font-weight: normal;">
+    <span style="color:green"><b>DEBUG</b></span>.
+    Si algo no funciona y no encontramos el motivo, activa esta opción.
+    Entonces el script mostrará información en la consola — puedes copiarla y enviarla al soporte.
+  </span>
+</label>
+
+<br>
+
+<label style="display:none;">
+  <input type="checkbox" id="notif_other_tab">
+  <span style="font-weight: normal;">
+    <span style="color:green"><b>Mostrar notificación</b></span> en tu pestaña o ventana actual cuando el script se pare en otra pestaña o ventana y no lo notes después de 15 segundos.
+    (DESACTIVADO — no funciona ahora).
+  </span>
+</label>
+</section>
+
+
+    <br>
+    <hr>
+    <br>
+<div id="status" style="color:red;font-weight:bold; display:none;">
+  Opciones guardadas. Vuelve a abrir Facebook ahora.
+</div>
+
+<button style="padding: 10px 20px;" id="save">Guardar ajustes</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button style="padding: 10px 20px;" id="reset">Restablecer valores</button>
+
+<p>
+<br>
+¿Tienes más páginas? ¡Tenemos un script que puede trabajar con todas automáticamente!<br>
+<span style="color:red;"><b>Visita nuestra web para ver más scripts.</b></span> Puedes mejorar a <b>FULL PACK y obtener acceso a todos nuestros scripts</b> + nuestros futuros proyectos gratis.
+<br><b>Nuestra web:</b> <a href="https://www.invitelikecomment.com/" target="_blank">https://www.invitelikecomment.com/</a>
+<br>Mira el vídeo antiguo de ejemplo para este script: <a href="https://www.youtube.com/watch?v=0qmBaRdCJPM" target="_blank">https://www.youtube.com/watch?v=0qmBaRdCJPM</a>
+</p>
+    
+</main>
+
+<div style="display:none;">
+<h2>Opciones avanzados</h2>
+<p>Estos números fueron probados, así que es mejor no cambiarlos, pero puedes hacerlo.
+</p>
+Esperar a que la ventana de invitaciones cargue antes del primer clic (milisegundos): <input name="fb_timeout_1" value="4000" type="number" min="1000" max="100000"><br>
+Esperar al intentar cargar más “Me gusta” en la ventana actual (milisegundos): <input name="fb_timeout_2" value="2000" type="number" min="1000" max="100000"><br>
+Esperar antes de abrir la siguiente publicación después de cerrar la actual: <input name="fb_timeout_3" value="1500" type="number" min="1000" max="100000"><br>
+Esperar después de hacer scroll para cargar más publicaciones: <input name="fb_timeout_4" value="7000" type="number" min="1000" max="100000">, después de 20 publicaciones necesitamos más tiempo: <input name="fb_timeout_5" value="10000" type="number" min="1000" max="100000">, después de 40 publicaciones necesitamos mucho más tiempo: <input name="fb_timeout_6" value="15000" type="number" min="1000" max="100000"><br><br>
+<br>
+* 1000 milisegundos = 1 segundo. Tiempo mínimo: 1000 ms. Tiempo máximo: 100 s.
+</div>
+
+
+
+
+
+<script src="options_pro.js"></script>
+</body>
+</html>

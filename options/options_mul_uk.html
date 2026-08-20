@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html>
+<head><title>Налаштування</title></head>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="options_mul.css" media="all" />
+<body>
+
+<h1>НАЛАШТУВАННЯ</h1>
+
+
+<main>
+  
+  <input id="tab1" type="radio" name="tabs" checked>
+  <label for="tab1">Режим Multi-Page</label>
+  
+  <input id="tab2" type="radio" name="tabs">
+  <label for="tab2">Швидкість</label>
+    
+  <input id="tab3" type="radio" name="tabs">
+  <label for="tab3">Фільтри</label>
+    
+  <input id="tab4" type="radio" name="tabs">
+  <label for="tab4">Поширені пости</label>
+  
+  <input id="tab5" type="radio" name="tabs">
+  <label for="tab5">Денний ліміт та інше</label>
+
+  
+<section id="content1">
+<h2>Як це працює?</h2>
+<p>
+<b>Повне сканування цієї сторінки</b> — відкрийте підтримувані вкладки (див. список при запуску скрипту) і запустіть цю опцію. Вона автоматично відкриє всі пости на цій сторінці та запросить усіх.
+<br><b>Сканування нових постів у реальному часі</b> — відкрийте підтримувані вкладки (див. список при запуску скрипту) і запустіть цю опцію. Автоматично відкриє останні X (за замовчуванням 5) постів сторінки та надішле запрошення всім, а потім перезапуститься через X хвилин, можна налаштувати на цій сторінці.
+<br><b>Режим MULTI pages</b> — має ті ж опції, різниця в тому, що ви обираєте більше сторінок, і розширення перевірить їх усі. Працює у вкладці Business Suite (автоматичний імпорт сторінок) АБО вставте список посилань вручну (посилання на Business Suite ваших сторінок). АБО можна просто відкрити Creator Studio і ЗАВАНТАЖИТИ всі пости зі сторінок, які потрібні, та запустити скрипт у режимі однієї сторінки для обробки всіх показаних постів.
+</p>
+
+
+
+<h2>Важливо знати:</h2>
+<p>
+1. Розширення знаходить кнопки за їх назвами, але <b>іноді Facebook змінює дизайн або назви кнопок</b>. Я часто оновлюю розширення, тому <b>якщо щось перестає працювати, напишіть електронний лист</b>. Зазвичай <b>виправляю це того ж дня</b>.
+<br>2. <b>Функції Full scan або Real time зупиняються несподівано?</b> У Google є помилка в новій версії Chrome. Якщо встановили скрипт на 2 ПК і увімкнена синхронізація — вона може синхронізувати порожні змінні на інший ПК, де працює скрипт, і це ламає його. Вимкніть синхронізацію, якщо запускаєте скрипт більше ніж на 1 ПК.
+<br>3. <b>Для постів із великою кількістю реакцій:</b> найкраще відкрити список людей, які відреагували на цей пост, і потім запустити скрипт. Скрипт побачить це і запитає, чи потрібно сканувати лише цей пост — натисніть Так. Якщо скрипт зупиняється до завершення, не закривайте список — просто запустіть знову, і він продовжить. Можна також спробувати параметр SAVE RAM, він допомагає з дуже великими постами.
+</p>
+
+<h2>Важливо – як продовжувати роботу під час виконання скрипту:</h2>
+Браузер може зупиняти розширення, якщо сторінка не відображається. Це означає, що скрипт не може прокручувати або натискати, якщо сторінка у фоновому режимі. Виконайте одне з наступного:
+<br>1. Залиште її на другому моніторі або відкрийте інше вікно, яке закриває приблизно 95% екрана, <a href="#" id="imgInfoShow1"><span style="color:red">натисніть тут, щоб показати/приховати приклад</span></a>
+<img id="img-select" style="display:none;width:100%" src="/page_must_be_visible.jpg">
+<br>2. Завантажте будь-яке розширення з функцією «Картинка в картинці». Вони створюють невелике спливаюче вікно для вкладки, тож можна продовжувати працювати.
+
+<h2>Налаштування режиму Multi-Page</h2>
+<p>
+Якщо у вас є Creator Studio, можна використовувати його, щоб обрати сторінки та завантажити пости з різних сторінок. У цьому випадку режим Multi-Page можна не запускати.
+<br>
+Щоб запустити скрипт у режимі Multi-Page, <b>оберіть сторінки, які хочете перевірити</b> (одне посилання на рядок) або просто натисніть кнопку Імпорт.
+</p>
+<label style="display:none"><input type="checkbox" id="multi_notif_page" checked>
+Замість запуску у вкладці Інструменти для публікацій запускати у вкладці Сповіщення (корисно для запусків у реальному часі, але може не працювати на деяких сторінках, де Сповіщення зламані).
+</label>
+<br>
+<label><input type="checkbox" id="multi_random_order">
+Відкривати сторінки у випадковому порядку (не рекомендовано).
+</label>
+<br><br>
+
+<a href="https://www.facebook.com/bookmarks/pages?fb-auto-invite=1"><button style="margin-bottom:5px;">Автоматично імпортувати посилання всіх сторінок</button></a>
+<p>
+Вставте URL усіх сторінок та/або постів, по одному в рядок. (Або використовуйте кнопку <b>Імпорт</b>)
+<br><b>Кнопка Імпорт не працюватиме, якщо є сторінки, які вимагають перемикання профілю для відкриття.
+У такому випадку відкрийте сторінки в Business Suite → Feed and Grid та скопіюйте URL кожної сторінки вручну.</b>
+<br><span style="color:red"><b>Переконайтесь, що URL містить ID сторінки — без нього Facebook може відкрити випадкову сторінку.</b> Приклад правильного URL:<br>https://business.facebook.com/latest/posts/feed_and_grid?<b>page_id=XXXXXXXXXX&asset_id=XXXXXXXXXX</b></span>
+<br>Або з вкладки Insights: https://business.facebook.com/latest/insights/content?<b>page_id=XXXXXXXXXX&asset_id=XXXXXXXXXX</b> (обов’язково включіть ID).
+<br><b>Оновлення 2025.06.10:</b> Тепер можна додавати в список окремі пости, наприклад: https://www.facebook.com/PAGENAME/posts/longpostid
+</p>
+<table width="100%">
+<tr><td width="50%">
+<b>Звичайний запуск</b>
+</td><td width="50%">
+<b>Запуск у реальному часі</b>
+</td></tr><tr><td>
+<textarea name="urllist1" id="urllist1" rows="10" style="width:95%;">
+</textarea>
+</td><td>
+<textarea name="urllist2" id="urllist2" rows="10" style="width:95%;">
+</textarea>
+</td></tr><tr>
+<td>
+Звичайний запуск простіший: просто запустіть розширення, і воно перевірить пости всіх сторінок. Якщо постів багато — обмежте перевірку, інакше сканування ВСІХ постів займе багато часу.
+<br>
+Перевіряти лише перші <input name="normal_run_limitposts" value="100" type="number" min="1" max="200"> постів (1–150).
+<br>
+НОВЕ: якщо не знайдено жодного запрошення після обробки <input name="normal_run_limitNoInvGoNextPage" value="100" type="number" min="1" max="200"> постів, переходимо до наступної сторінки.
+</td>
+<td>
+Які пости потрібно перевіряти для кожної сторінки (приклад: 5 найновіших постів: 1,2,3,4,5): <input name="loop_PostsList" value="1,2,3,4,5"> (лише видимі пости, сторінка не прокручується)
+<br>
+Пауза в хвилинах перед наступним циклом (скануванням): <input name="loop_Pause" value="5" type="number" min="1" max="200">
+<!--
+<br>
+<label><input type="checkbox" id="notloadtoomuch">Якщо після завантаження 50 кнопок на пості немає доступної кнопки Invite — більше не натискати «Load more», перейти до наступного поста (економить багато RAM).</label><br><br>
+-->
+</td>
+</tr>
+</table>
+<p>
+<span style="color:green"><b>Можна додавати також прямі посилання на пости.</b></span>
+<br>
+<!--
+<b>How to add a direct link to the published post?</b> Go to the post you like, and click on the date, then Copy&Paste the direct link here.
+<br><img src="instructions_1.png">
+<br>
+<b>How to add ads link (dark post)?</b> Go to <a href="https://business.facebook.com/content_management" target="_blank">https://business.facebook.com/content_management</a> then Ads => Choose the page you want => Copy and paste the link to the list of processed pages and it will scan it!
+<br>
+<b><span style="color:red;"><b>NEW (Feb 2019):</b></span> we support Creator Studio links, single post/video/photo links too, just add them like this:</b>
+<br>https://www.facebook.com/bestofcinqueterre/<b>posts</b>/1648279192153465
+-->
+</p>
+<p>
+Буде додано більше опцій у майбутньому. Потрібні ще? Напишіть email :)<br>
+</p>
+
+
+  </section>
+  
+  
+<section id="content2">
+<p>
+<b>Щоб виглядати більш як реальна людина, потрібна випадкова затримка.</b> Виберіть 2 числа, і скрипт використовуватиме випадкове число (мілісекунди) між ними для кожного кліка.
+<br><span style="color:red">Важливо: якщо запрошувати надто швидко, Facebook може заблокувати інвайти на 24 години. Мінімальне значення має бути принаймні 2 секунди.</span> Налаштування за замовчуванням хороші, але якщо Facebook обмежив вас на 1 день, збільшіть час до 3 секунд або більше. <b>Не використовуйте Facebook під час роботи скрипта!</b>
+</p>
+<div id="status1" style="color:red;font-weight:bold;"></div>
+<b>Випадкова пауза після кожного інвайту</b> між 
+<select id="p1_1"><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="8">8</option><option value="13">13</option><option value="18">18</option><option value="30">30</option><option value="50">50</option><option value="80">80</option><option value="150">150</option><option value="180">180</option></select> і <select id="p1_2"><option value="2.5">2.5</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="7">7</option><option value="8">8</option><option value="10">10</option><option value="15">15</option><option value="22">22</option><option value="35">35</option><option value="55">55</option><option value="75">75</option><option value="90">90</option><option value="150">150</option><option value="180">180</option></select> секунд.
+<br>
+<label><input type="checkbox" id="additional_script_pause">Додати 30-секундну паузу після кожних 40 інвайтів (або лайків/коментарів).</label>
+<br><br>
+<b>Прокручувати список людей, які лайкнули пост, <input name="scroll_before_inv_nr" value="0" type="number" min="0" max="999"> раз(ів) перед інвайтами.</b> Якщо часто отримуєте ліміти, спробуйте цей варіант.
+<br>Додати затримку <input name="fb_limit_show_more_btn_add_sec" value="0" type="number" min="1" max="600"> секунд між прокрутками.
+
+  </section>
+    
+  <section id="content3">
+    <b>Необов’язково:</b>
+<br>
+<!--<label><input type="checkbox" id="check_post_first" checked>If there is a post opened - check its likes first.</label>
+<br>-->
+<label><input type="checkbox" id="skip_like_emotion">Не інвайтити людей, які використали реакцію <img src="/fbicons/react_like.png"> like.</label>
+<br><label><input type="checkbox" id="skip_love_emotion">Не інвайтити людей, які використали реакцію <img src="/fbicons/react_love.png"> love.</label>
+<br><label><input type="checkbox" id="skip_haha_emotion">Не інвайтити людей, які використали реакцію <img src="/fbicons/haha.png"> haha.</label>
+<br><label><input type="checkbox" id="skip_wow_emotion">Не інвайтити людей, які використали реакцію <img src="/fbicons/react_wow.png"> wow.</label>
+<br><label><input type="checkbox" id="skip_sad_emotion">Не інвайтити людей, які використали реакцію <img src="/fbicons/sad.png"> sad.</label>
+<br><label><input type="checkbox" id="skip_angry_emotion">Не інвайтити людей, які використали реакцію <img src="/fbicons/angry.png"> angry.</label>
+
+<br><br><label style="display:none;"><input type="checkbox" id="like_other_pages">Якщо будь-яка сторінка лайкнула мій пост, натиснути кнопку "LIKE" для автоматичного лайку (це не інвайтить сторінку, ви просто лайкаєте її).</label>
+
+<br><br>
+<span style="color:red;">НОВЕ!</span> За замовчуванням скрипт сканує вкладку 'All' (де всі реакції показані разом). Також можна сканувати кожну вкладку окремо. Примітка: ця опція може перестати працювати після зміни іконок реакцій Facebook — ми виправимо це в наступному оновленні:
+<br><label><input type="checkbox" id="scan_reactions_tabs_more1">Сканувати лайкерів поста у вкладках окремо (Like, Love, Haha тощо), якщо пост має більше ніж 1000 реакцій.</label>
+<br><label><input type="checkbox" id="scan_reactions_tabs">Завжди сканувати лайкерів поста у вкладках окремо (будуть використані фільтри реакцій). Потребує більше часу.</label>
+<br>Під час інвайту друзів (або підписників сторінки в групу): пропустити перших <input name="friends_skip_nr" value="0" type="number" min="0" max="5000"> людей у списку і не вибирати їх. Це може допомогти, якщо деяких користувачів не можна інвайтнути через баг.
+<br><br>
+
+<b>Хочете пропустити деякі конкретні імена?</b> Хочете пропустити людей з іншого континенту? Створіть список імен/літер, які потрібно пропустити (через кому): <input name="name_comm_filter1" value="" type="text" style="width: 500px;">
+<br>Або <input type="checkbox" id="accept_ashii_names_only"><label for="accept_ashii_names_only"><b>інвайтити лише користувачів з іменами, написаними ASCII-символами</b> (імена з літерами à, ä, è, ó, ы, 漢, ف тощо будуть пропущені).</label>
+<br><label><input type="checkbox" id="skip_no_profile_image">Не інвайтити людей, у яких немає <img src="no_profile_image.jpg"> аватарки.</label>
+
+<br>
+  </section>
+  
+  
+<section id="content4">
+  <p>
+<label><input type="checkbox" id="share_put_likes"><span style='color:green'><b>Перевіряти шернуті пости та автоматично ставити на них Лайки</b></span>. Ця функція працює лише якщо запускати розширення у <b>вкладці Publishing Tools (найкраще) або Creator Studio чи Content management</b>.</label>
+<br>Якщо ставити надто багато лайків, Facebook може показати капчу. Можна обмежити кількість лайків за запуск тут: <input name="share_likes_limit" value="300" type="number" min="1" max="5000">. Використовує ті ж таймаути, що й для інвайтів.
+
+<br><br><b>Неможливо публікувати коментарі на Shares через обмеження Facebook з 2021 року.</b>
+
+<br><br><label><input type="checkbox" id="stop_on_captcha_shown">Зупинятись, якщо з’явилась капча (БЕТА). Потребує більше тестів — капчу не бачив останні 6 місяців.</label>
+<br><br><b>Оновлення, травень 2026:</b> Facebook змінив дизайн, і тепер неможливо автоматично відкривати поширені дописи. Однак, якщо відкрити список вручну, а потім запустити скрипт, він працюватиме. Посилання на поширення виглядає так: https://www.facebook.com/shares/view?id=XXXXXXXXXXXXXXXX
+<div style="display:none;">
+<br><br>
+<b>Сканування сторінок у вкладці Notifications (новий інтерфейс Facebook)</b>: ми намагаємось додати підтримку сканування сповіщень. Зараз працює (БЕЗ шернутіх постів), але потрібно пропускати сповіщення про групи і шери. <input name="elemSkipInNotificationsTab" value=".sx_e9b3e2,.sx_848308" type="text" style="width: 300px;">
+</div>
+
+</section>
+    
+<section id="content5">
+
+<p>
+Facebook встановлює для кожної людини власний ліміт запрошень. Зазвичай можна надсилати приблизно <b>500 запрошень на день або кожні кілька годин</b>.  
+Це число змінюється залежно від того, скільки запрошень було прийнято та скільки ви надіслали за останній тиждень або місяць.  
+Тут можна встановити ліміт — коли він буде досягнутий, розширення зупиниться автоматично.  
+Після досягнення ліміту зачекайте 3–4 години і спробуйте знову.  
+Також можна використати інший профіль, який керує тією самою сторінкою, щоб надіслати більше запрошень у той самий день.
+</p>
+
+Limit for one run (all pages, total):
+<input name="fb_limit" value="490" type="number" min="1" max="5000">
+
+<br>
+Limit for one page (used only in Multi-Pages mode):
+<input name="fb_limit_multi" value="490" type="number" min="1" max="5000">
+
+<br>
+Facebook не подобається, коли ми натискаємо надто багато кнопок “Показати більше” (або занадто багато прокручуємо список).  
+Краще не натискати більше ніж 200 разів на один пост (зазвичай люди можуть дійти лише до ~50 вручну).  
+Не натискати (прокручувати) більше ніж
+<input name="fb_limit_show_more_btn" value="199" type="number" min="1" max="5000">
+разів на пост.
+
+<br>
+<label>
+  <input type="checkbox" id="try_after_limit">
+  Multi-Pages:
+</label>
+Якщо ліміт Facebook досягнуто на одній сторінці, переходити до наступної і спробувати запрошувати там також.  
+Зазвичай це працює, але не завжди.
+
+<br>
+<label>
+  <input type="checkbox" id="pauseAfterLimit">
+  Extra pause:
+</label>
+Кожні
+<input name="pauseAfterLimit3" value="50" type="number" min="1" max="5000">
+запрошень робити
+<input name="pauseAfterLimit2" value="180" type="number" min="0" max="5000">
+хвилин паузи.  
+(Цей параметр дозволяє запускати скрипт без зупинки 24 години — просто збільште загальний ліміт, щоб він не зупинився на 490!)
+
+<br><br>
+
+<label style="display:none;">
+  <input type="checkbox" id="skip_Invite">
+  <span style="color:red">
+    <span style="color:green">
+      <b>ВИМКНУТИ функцію запрошень.</b>
+      Використовуйте, якщо у вас понад 100 000 вподобань або якщо потрібно обробляти лише поширені пости.
+    </span>
+    Розширення НЕ надсилатиме запрошення, але може автоматично ставити вподобання всім поширеним постам (увімкніть опцію вище).
+  </span>
+</label>
+
+<br>
+<span style="color:green"><b>Потрібно пропустити деякі пости?</b></span>
+Відкрийте вкладку Publishing Tools — на сторінці 25 постів.  
+Відкрийте потрібну сторінку і запустіть розширення там.  
+Якщо все ж потрібно пропустити деякі пости на цій сторінці, впишіть номер тут (зберігається лише для одного запуску):
+<input name="skip_post_setting" value="0" type="number" min="0" max="25">
+(1–24 або будь-яке число, якщо запускаєте скрипт у вкладці Photos)
+
+<br><br>
+
+<span style="color:green"><b>Оновлення сканування Business Suite (жовтень 2021):</b></span>
+Під час сканування в Business Suite деякі сторінки не можуть відкрити пости в тій самій вкладці (баг Facebook).  
+У такому випадку скрипт відкриває їх у новій вкладці — але це може не підійти.  
+Якщо ваша сторінка може відкривати список вподобань у тій самій вкладці, увімкніть цю опцію:
+<label>
+  <input type="checkbox" id="scan_current_tab_business_suite">
+  scan posts in the current tab
+</label>
+
+<br><br>
+
+<label>
+  <input type="checkbox" id="slow_internet">
+  <span style="font-weight: normal;">
+    <span style="color:green"><b>ПОВІЛЬНИЙ інтернет</b></span>.
+    Зазвичай, коли ви скануєте багато сторінок або використовуєте режим реального часу, скрипт чекає до 30 секунд на завантаження сторінки.  
+    Якщо потрібно довше, скрипт зупиняється.  
+    Увімкнення цієї опції збільшує час очікування до 3 хвилин.  
+    Це також може вплинути на нові функції в майбутньому.
+  </span>
+</label>
+
+<br>
+
+<label>
+  <input type="checkbox" id="debug_option">
+  <span style="font-weight: normal;">
+    <span style="color:green"><b>DEBUG</b></span>.
+    Якщо щось не працює і ми не можемо знайти причину, увімкніть цю опцію.  
+    Тоді скрипт покаже інформацію в консолі — її можна скопіювати та надіслати в підтримку.
+  </span>
+</label>
+
+<br>
+
+<label style="display:none;">
+  <input type="checkbox" id="notif_other_tab">
+  <span style="font-weight: normal;">
+    <span style="color:green"><b>Показувати повідомлення</b></span>
+    у вашій поточній вкладці або вікні, коли скрипт зупиняється в іншій вкладці або вікні, і ви не помічаєте цього протягом 15 секунд.  
+    (ВИМКНЕНО — зараз не працює).
+  </span>
+</label>
+</section>
+
+
+    <br>
+    <hr>
+    <br>
+<div id="status" style="color:red;font-weight:bold; display:none;">
+  Параметри збережено. Перезапустіть Facebook зараз.
+</div>
+
+<button style="padding: 10px 20px;" id="save">Save Settings</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button style="padding: 10px 20px;" id="reset">Reset to default</button>
+
+<p>
+<br>
+<span style="color:red;"><b>Відвідайте наш сайт, щоб побачити більше скриптів!</b></span> Можна оновити до <b>FULL PACK і отримати доступ до всіх наших скриптів</b> + майбутніх проєктів безкоштовно.
+<br><b>Наш сайт:</b> <a href="https://www.invitelikecomment.com/" target="_blank">https://www.invitelikecomment.com/</a>
+<br>Подивіться старий відеоприклад для цього скрипту: <a href="https://www.youtube.com/watch?v=FUU_-N2Adec" target="_blank">https://www.youtube.com/watch?v=FUU_-N2Adec</a>
+</p>
+    
+</main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div style="display:none;">
+<h2>Більш розширені налаштування</h2>
+<p>Ці значення протестовані, тому краще їх не змінювати, але можна.
+</p>
+Wait when invite likes' window is loaded before first click (milisconds): <input name="fb_timeout_1" value="4000" type="number" min="1000" max="100000"><br>
+Wait when trying to load more likes for current window (miliseconds): <input name="fb_timeout_2" value="2000" type="number" min="1000" max="100000"><br>
+Wait before opening the next post after it closes the current: <input name="fb_timeout_3" value="1500" type="number" min="1000" max="100000"><br>
+Wait after it scrolls the page to load more posts: <input name="fb_timeout_4" value="7000" type="number" min="1000" max="100000">, after 20 posts we need more timeout as a page is too bigger: <input name="fb_timeout_5" value="10000" type="number" min="1000" max="100000">, after 40 posts we need much more timeout as a page is tooooo bigger: <input name="fb_timeout_6" value="15000" type="number" min="1000" max="100000"><br><br>
+<br>
+* 1000 miliseconds = 1 second. Minimum timeout: 1000 milisec. Max timeout 100 sec.
+</div>
+
+
+
+
+<script src="options_mul.js"></script>
+</body>
+</html>

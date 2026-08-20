@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+<head><title>Settings</title></head>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="options_pro.css" media="all" />
+<body>
+
+<h1>SETTINGS</h1>
+
+
+<main>
+  
+  <input id="tab1" type="radio" name="tabs" checked>
+  <label for="tab1">Random Time Settings</label>
+    
+  <input id="tab2" type="radio" name="tabs">
+  <label for="tab2">Invite Filters</label>
+    
+  <input id="tab3" type="radio" name="tabs">
+  <label for="tab3">Shared posts</label>
+  
+  <input id="tab4" type="radio" name="tabs">
+  <label for="tab4">Daily limit & other</label>
+
+  
+<section id="content1">
+<p>
+<b>To look more like a real person, we need some random delay.</b> Choose 2 numbers, and the script will use a random number (milisconds) between them for every click.
+<br><span style="color:red">Important: if you invite too fast, Facebook can block invites for 24 hours. Minimum value should be at least 2 seconds.</span> Default settings are good, but if Facebook limits you for 1 day, increase the time to 3 seconds or more. <b>Do not use Facebook while the script is running!</b>
+</p>
+<div id="status1" style="color:red;font-weight:bold;"></div>
+<b>Random pause after each invite</b> between 
+<select id="p1_1"><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="8">8</option><option value="13">13</option><option value="18">18</option><option value="30">30</option><option value="50">50</option><option value="80">80</option><option value="150">150</option><option value="180">180</option></select> to <select id="p1_2"><option value="2.5">2.5</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="7">7</option><option value="8">8</option><option value="10">10</option><option value="15">15</option><option value="22">22</option><option value="35">35</option><option value="55">55</option><option value="75">75</option><option value="90">90</option><option value="150">150</option><option value="180">180</option></select> seconds.
+<br>
+<label><input type="checkbox" id="additional_script_pause">Add a 30-second pause after every 40 invites (or likes/comments).</label>
+<br><br>
+<b>Scroll the list of people who liked the post <input name="scroll_before_inv_nr" value="0" type="number" min="0" max="999"> times before inviting.</b> If you get limits often, try this option.
+<br>Add a delay of <input name="fb_limit_show_more_btn_add_sec" value="0" type="number" min="1" max="600"> seconds between scrolls.
+
+
+
+
+<br><br><br>
+
+<h2>Important to know:</h2>
+<p>
+1. The extension finds buttons by their names, but <b>sometimes Facebook changes its design or button names</b>. I update the extension often, so <b>if something stops working, please email me</b>. Usually, <b>I fix it the same day</b>. 🙂
+<br>2. <b>For posts with many reactions:</b> the best way is to open the list of people who reacted to that post and then start the script. The script will see it and ask if you want to scan only this post — click Yes. If the script stops before the end, don’t close the list — just start it again, and it will continue. You can also try using the SAVE RAM option, it helps with very big posts.
+</p>
+
+
+<h2>Important – how to keep working while the script runs:</h2>
+The browser can stop extensions if the page is not visible. That means the script cannot scroll or click if the page is in the background. Do one of these:
+<br>1. Just leave it on the second monitor or open another window that covers about 95% of your screen, <a href="#" id="imgInfoShow1"><span style="color:red">click here to see/hide the example</span></a>
+<img id="img-select" style="display:none;width:100%" src="/page_must_be_visible.jpg">
+<br>2. Download any extension with a 'Picture-in-picture' feature. These create a small popup window for the tab, so you can keep working.
+
+
+  </section>
+    
+  <section id="content2">
+    <b>Optional:</b>
+<br>
+<!--<label><input type="checkbox" id="check_post_first" checked>If there is a post opened - check its likes first.</label>
+<br>-->
+<label><input type="checkbox" id="skip_like_emotion">Do not invite people who used the <img src="/fbicons/react_like.png"> like reaction.</label>
+<br><label><input type="checkbox" id="skip_love_emotion">Do not invite people who used the <img src="/fbicons/react_love.png"> love reaction.</label>
+<br><label><input type="checkbox" id="skip_haha_emotion">Do not invite people who used the <img src="/fbicons/haha.png"> haha reaction.</label>
+<br><label><input type="checkbox" id="skip_wow_emotion">Do not invite people who used the <img src="/fbicons/react_wow.png"> wow reaction.</label>
+<br><label><input type="checkbox" id="skip_sad_emotion">Do not invite people who used the <img src="/fbicons/sad.png"> sad reaction.</label>
+<br><label><input type="checkbox" id="skip_angry_emotion">Do not invite people who used the <img src="/fbicons/angry.png"> angry reaction.</label>
+<br><br>
+<span style="color:red;">NEW!</span> By default, the script scans the 'All' tab (where all reactions are shown together). You can also scan each reaction tab separately. Note: this option may stop working when Facebook changes reaction icons - we fix it in the next update:
+<br><label><input type="checkbox" id="scan_reactions_tabs_more1">Scan post likers in separate tabs (Like, Love, Haha, etc.) if the post has more than 1000 reactions.</label>
+<br><label><input type="checkbox" id="scan_reactions_tabs">Always scan post likers in separate tabs (reaction filters will be used). This option takes more time.</label>
+<br>When inviting friends (or page followers to a group): skip the first <input name="friends_skip_nr" value="0" type="number" min="0" max="5000"> people in the list and don’t select them. This can help if some users cannot be invited due to a bug.
+
+<br>
+  </section>
+  
+  
+  <section id="content3">
+
+<label><input type="checkbox" id="share_put_likes"><span style='color:red'><b>Bonus.</b></span> <span style='color:green'><b>Check shared posts and automatically put Likes on them</b></span>. This feature works only if you run the extension in the <b>Publishing Tools tab (recommended) or in business.facebook.com → Page Posts (for dark posts)</b>.</label>
+<br>If you give too many Likes, Facebook may show a captcha. You can limit the number of Likes per run here: <input name="share_likes_limit" value="100" type="number" min="1" max="5000">. It uses the same timeouts as for invites.
+<br><label><input type="checkbox" id="stop_on_captcha_shown">Stop if a captcha appears (BETA). This option needs more testing - I haven’t seen a captcha in the last 6 months.</label>
+
+</section>
+    
+<section id="content4">
+<p>
+Facebook gives each person their own invite limit. Usually, you can send about <b>500 invites per day or every few hours</b>. The real number changes depending on how many invites were accepted and how many you sent in the last week or month.  
+Here you can set a limit — when this limit is reached, the extension will stop automatically.  
+Once you reach the limit, wait 3–4 hours and try again.  
+You can also use another profile that manages the same page to send more invites on the same day.
+</p>
+
+Limit for one run:
+<input name="fb_limit" value="490" type="number" min="1" max="5000">
+
+<br>
+Facebook doesn’t like when we click too many “Show more” buttons (or scroll too many times in the list).  
+It’s better not to click more than 200 times per post (normally people can reach only about 50 manually).  
+Do not click (scroll) more than
+<input name="fb_limit_show_more_btn" value="199" type="number" min="1" max="5000">
+times per post.
+
+<br><br>
+
+<label style="display:none;">
+  <input type="checkbox" id="skip_Invite">
+  <span style="color:red">
+    <span style="color:green">
+      <b>DISABLE Invite feature.</b> Use this if you have more than 100,000 likes or if you want to process only shared posts.
+    </span>
+    The extension will NOT send invites, but it can automatically like all shared posts (check the option above).
+  </span>
+</label>
+
+<br>
+<span style="color:green"><b>Do you want to skip some posts?</b></span>
+Open the Publishing Tools tab — there are 25 posts on each page.  
+Open the page you want and start the extension there.  
+If you still want to skip some posts on that page, write the number here (it is saved only for one run):
+<input name="skip_post_setting" value="0" type="number" min="0" max="25">
+(1–24 or any number if you run the script in the Photos tab)
+
+<br><br>
+
+<span style="color:green"><b>Business Suite scanning update (Oct 2021):</b></span>
+When scanning in Business Suite, some pages can’t open posts in the same tab (Facebook bug).  
+In that case, the script opens them in a new tab — but that might not work for you.  
+If your page can open the list of likers in the same tab, enable this option:
+<label>
+  <input type="checkbox" id="scan_current_tab_business_suite">
+  scan posts in the current tab
+</label>
+
+<br><br>
+
+<label>
+  <input type="checkbox" id="slow_internet">
+  <span style="font-weight: normal;">
+    <span style="color:green"><b>SLOW internet</b></span>.
+    Normally, when you scan many pages or use real-time scan, the script waits up to 30 seconds for the page to load.
+    If it takes longer, the script stops.  
+    With this option, the waiting time increases to 3 minutes.  
+    This may also affect new features added in the future.
+  </span>
+</label>
+
+<br>
+
+<label>
+  <input type="checkbox" id="debug_option">
+  <span style="font-weight: normal;">
+    <span style="color:green"><b>DEBUG</b></span>.
+    If something doesn’t work and we can’t find the reason, enable this option.
+    Then the script will show info in the console — you can copy that and send it to support.
+  </span>
+</label>
+
+<br>
+
+<label style="display:none;">
+  <input type="checkbox" id="notif_other_tab">
+  <span style="font-weight: normal;">
+    <span style="color:green"><b>Show a notification</b></span> in your current tab or window when the script stops in another tab or window and you don’t notice it after 15 seconds.
+    (DISABLED — not working now).
+  </span>
+</label>
+</section>
+
+
+    <br>
+    <hr>
+    <br>
+<div id="status" style="color:red;font-weight:bold; display:none;">
+  Options saved. Reopen Facebook now.
+</div>
+
+<button style="padding: 10px 20px;" id="save">Save Settings</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button style="padding: 10px 20px;" id="reset">Reset to default</button>
+
+<p>
+<br>
+Do you have more pages? We have a script that can work with all of them automatically!<br>
+<span style="color:red;"><b>Visit our website to see more scripts!</b></span> You can upgrade to <b>FULL PACK and get access to all our scripts</b> + our future projects for free.
+<br><b>Our website:</b> <a href="https://www.invitelikecomment.com/" target="_blank">https://www.invitelikecomment.com/</a>
+<br>Watch the old video example for this script: <a href="https://www.youtube.com/watch?v=0qmBaRdCJPM" target="_blank">https://www.youtube.com/watch?v=0qmBaRdCJPM</a>
+</p>
+    
+</main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div style="display:none;">
+<h2>More advanced settings</h2>
+<p>Those numbers were tested, so it's better to not change them, but you can.
+</p>
+Wait when invite likes' window is loaded before first click (milisconds): <input name="fb_timeout_1" value="4000" type="number" min="1000" max="100000"><br>
+Wait when trying to load more likes for current window (miliseconds): <input name="fb_timeout_2" value="2000" type="number" min="1000" max="100000"><br>
+Wait before opening the next post after it closes the current: <input name="fb_timeout_3" value="1500" type="number" min="1000" max="100000"><br>
+Wait after it scrolls the page to load more posts: <input name="fb_timeout_4" value="7000" type="number" min="1000" max="100000">, after 20 posts we need more timeout as a page is too bigger: <input name="fb_timeout_5" value="10000" type="number" min="1000" max="100000">, after 40 posts we need much more timeout as a page is tooooo bigger: <input name="fb_timeout_6" value="15000" type="number" min="1000" max="100000"><br><br>
+<br>
+* 1000 miliseconds = 1 second. Minimum timeout: 1000 milisec. Max timeout 100 sec.
+</div>
+
+
+
+
+
+<script src="options_pro.js"></script>
+</body>
+</html>

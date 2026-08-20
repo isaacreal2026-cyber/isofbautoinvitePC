@@ -1,0 +1,133 @@
+<style>
+    @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700');
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+main>*, main>*:before, main>*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100vh;
+}
+
+body {
+      font-family: "Segoe UI", Tahoma, sans-serif;
+  color: #555;
+  background: #eee;
+      font-size: 100%;
+}
+button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+body{
+font-size: 100%;
+}
+table{
+border: 1px solid black;
+}
+td {
+   border-right: 1px solid black;
+   border-left: 1px solid black;
+   padding:5px;
+}
+button:hover{
+cursor:pointer;
+opacity: 0.8;
+}
+h1 {
+  font-weight: 400;
+  text-align: center;
+}
+
+p {
+  margin: 0 0 20px;
+  line-height: 1.5;
+}
+
+main {
+  min-width: 320px;
+  max-width: 1200px;
+  padding: 50px;
+  margin: 0 auto;
+  background: #fff;
+}
+
+section {
+  display: none;
+  padding: 20px 0 0;
+  border-top: 1px solid #ddd;
+}
+
+input[type="radio"]{
+    visibility:hidden;
+}
+.setmore input[type="radio"]{
+visibility:inherit;
+}
+
+label {
+  display: inline-block;
+  margin: 0 0 -1px;
+  
+  font-weight: 600;
+  color: #000;
+  border: 1px solid transparent;
+}
+main>label{
+padding: 15px 25px;
+}
+
+label:before {
+  font-family: fontawesome;
+  font-weight: normal;
+  margin-right: 10px;
+}
+
+label[for*='1']:before { content: '🔄'; }   /* arrows */
+label[for*='2']:before { content: '\0231A'; }
+label[for*='3']:before { content: '😊'; }   /* smile */
+label[for*='4']:before { content: '\1F4AC'; }
+label[for*='5']:before { content: '⚙️'; }  /* settings */
+
+label:hover {
+  color: #888;
+  cursor: pointer;
+}
+
+input[type="radio"]:checked + label {
+  color: #555;
+  border: 1px solid #ddd;
+  border-top: 2px solid orange;
+  border-bottom: 1px solid #fff;
+}
+
+#tab1:checked ~ #content1,
+#tab2:checked ~ #content2,
+#tab3:checked ~ #content3,
+#tab4:checked ~ #content4,
+#tab5:checked ~ #content5 {
+  display: block;
+}
+
+@media screen and (max-width: 1050px) {
+  label:before {
+    margin: 0;
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  label {
+    padding: 15px;
+  }
+}
+</style>

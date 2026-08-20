@@ -1,0 +1,685 @@
+{
+"small_name": {
+	"message": "m1"
+},
+"you_stop": {
+	"message": "Ви зупинили скрипт!"
+},
+"UI_1": {
+	"message": "Режим ОДНІЄЇ сторінки"
+},
+"UI_2": {
+	"message": "Відкрийте одну з <b>рекомендованих вкладок</b> і виберіть опцію:"
+},
+"UI_3": {
+	"message": "Режим ДЕКІЛЬКОХ сторінок"
+},
+"UI_4": {
+	"message": "Вкажіть ваші сторінки в"
+},
+"UI_5": {
+	"message": "Налаштуваннях"
+},
+"UI_6": {
+	"message": "і просто запустіть потрібну опцію:"
+},
+"UI_7": {
+	"message": "Більше інформації і зміна лімітів на"
+},
+"UI_8": {
+	"message": "сторінці налаштувань"
+},
+"UI_9": {
+	"message": "Повне сканування цієї сторінки (або відкритого поста)"
+},
+"UI_10": {
+	"message": "Сканувати нові пости в реальному часі"
+},
+"UI_11": {
+	"message": "Повне сканування ВСІХ сторінок"
+},
+"UI_12": {
+	"message": "Сканувати ВСІ сторінки в реальному часі"
+},
+"UI_13": {
+	"message": "Помилка: потрібно вибрати сторінки для сканування. Перейдіть в опції."
+},
+"pause_1": {
+	"message": "Пауза"
+},
+"pause_2": {
+	"message": "секунд перед наступним циклом."
+},
+"pause_3": {
+	"message": "Сторінка буде перезавантажена"
+},
+"limit_err1": {
+	"message": "Facebook показав помилку. Прочитайте її! <b>Якщо бачите 'invited too fast' / 'spam limitation'</b>, збільште затримки (як збільшити: закрийте список людей і запустіть скрипт) і НЕ користуйтеся Facebook одночасно. Спробуйте знову через 24 год. Таке трапляється навіть при ручному інвайті, через ~24 год все має знову працювати. Іноді потрібно 2–3 дні, щоб ліміт скинувся."
+},
+"pages_checked": {
+	"message": "Перевірено сторінок:"
+},
+"publ_check_tab": {
+	"message": "Вкладка Publishing Tools:"
+},
+"redirect": {
+	"message": "Перехід до вкладки Posts, запустіть скрипт ще раз."
+},
+"total_inv_sent": {
+	"message": "Всього надіслано інвайтів:"
+},
+"posts_checked": {
+	"message": "Перевірено постів:"
+},
+"do_not_use_anymore": {
+	"message": "Спробуйте через 24 години, ліміт FB має скинутися."
+},
+"total_invited": {
+	"message": "Всього заінвайчено:"
+},
+"switch_tab_info": {
+    "message": "<span style='color:red'>Не перемикайте вкладки і не мінімізуйте; браузер може зупинити скрипт.</span> Тримайте 5% вікна видимим або використовуйте розширення Picture-in-Picture."
+},
+"done": {
+	"message": "Готово!"
+},
+"start_inv": {
+	"message": "Натисніть, щоб почати інвайт"
+},
+"descr_inv": {
+	"message": "Одним кліком можна просканувати всі пости ваших Facebook-сторінок і запросити тих, хто лайкнув пости, підписатися на сторінку."
+},
+"paused": {
+	"message": ". Пауза (кожні 40 інвайтів). Продовження через 30 секунд."
+},
+"review": {
+	"message": "Було корисно? Залиште відгук..."
+},
+"error1": {
+	"message": "ПОМИЛКА! Пости не знайдено! Запустіть скрипт у Business Suite, Content Management або Publishing Tools, де видно список постів! Якщо щось не так, напишіть на info@invitelikecomment.com з деталями."
+},
+"facebook_limit_block": {
+	"message": "Помилка: з’явилося спливаюче повідомлення Facebook, прочитайте його. Якщо бачите 'going too fast' або 'anti spam limitation': <b>натисніть 'let us know' і (важливо!) повідомте про це Facebook</b>, встановіть затримку 8–10 сек для інвайтів (або 10–15 для коментарів) і <b>не користуйтеся Facebook одночасно</b>. Спробуйте знову через 24 год. Іноді таке буває навіть при ручному інвайті/скролі."
+},
+"after_text1": {
+	"message": "<span style=\"color:green;font-weight:bold;\">Було корисно?</span> якщо вам подобається розширення, <span style=\"color:green;font-weight:bold;\"><b>оцініть його на 5 зірок і залиште гарний відгук.</b></span>"
+},
+"after_done": {
+	"message": "Готово"
+},
+"after_share": {
+	"message": "Поділитися"
+},
+"after_rate": {
+	"message": "Відгук"
+},
+"after_scan_posts": {
+	"message": "Сканувати також усі пости"
+},
+"after_scan_comments": {
+	"message": "Сканувати також коментарі"
+},
+"after_close": {
+	"message": "Закрити"
+},
+"pLocN1": {
+	"message": "БЕЗКОШТОВНИЙ ПЕРІОД ЗАКІНЧИВСЯ!"
+},
+"pLocN2": {
+	"message": "Максимум %s інвайтів на день, поверніться завтра або придбайте скрипт"
+},
+"pLocN3": {
+	"message": "Ліцензію підтверджено"
+},
+"pLocN4": {
+	"message": "Безкоштовний період завершився або ліцензія не активна. Доступна лише БЕЗКОШТОВНА функція: відкрийте список лайкерів і запустіть скрипт, або придбайте повну версію."
+},
+"pLocN5": {
+	"message": "Ліцензію підтверджено! Збережіть її десь АБО додайте email, щоб ми могли надіслати код, якщо ви його втратите."
+},
+"pLocN6": {
+	"message": "Ліцензію підтверджено! Якщо втратите, можете відновити її через email."
+},
+"pLocN7": {
+	"message": "Надіслано надто багато запитів, зачекайте 30 сек перед повтором! Не використовуйте VPN."
+},
+"pLocN8": {
+	"message": "Спочатку вставте ліцензію (можна придбати на нашому сайті). Якщо втратили ліцензію, введіть email, який зберігали при покупці."
+},
+"pLocN9": {
+	"message": "Перевірте ліцензію уважніше. Некоректна. Якщо втратили ліцензію – введіть email, який зберігали при покупці."
+},
+"pLocN10": {
+	"message": "Введіть ліцензійний код або email, якщо забули код, але раніше прив’язували його до email."
+},
+"pLocN11": {
+	"message": "Видалити ліцензію з цього браузера? Натисніть YES/OK"
+},
+"unsupported_language_alert": {
+	"message": "Увага! Мова вашого Facebook (%s) не підтримується скриптом і він може не працювати. Змініть мову Facebook на АНГЛІЙСЬКУ."
+},
+"too_many_pages_alert": {
+	"message": "%s. Забагато сторінок, список буде трохи скорочено."
+},
+"facebook_not_english": {
+	"message": "<span style='color:red;font-weight: bold;'>Facebook не англійською - перемкніть на англійську при проблемах.</span><br>"
+},
+"facebook_not_english_html": {
+	"message": "<span style='color:red;font-weight: bold;'>Facebook не англійською - перемкніть на англійську при проблемах.</span><br>"
+},
+"fast_scan_label": {
+	"message": "<span style='color:green'><b>Швидке сканування:</b></span>"
+},
+"fast_scan_before": {
+	"message": "пропустити пост, якщо 0 заінвайчено після"
+},
+"fast_scan_after":  {
+	"message": "прокрутки списку."
+},
+"fast_scan_title": {
+	"message": "Використовуйте після опрацювання всіх постів. Якщо скрипт не знайде людей для інвайту, він пропустить пост і перейде до наступного."
+},
+"whats_new": {
+	"message": "що нового?"
+},
+"before_running_script": {
+	"message": "ПЕРЕД запуском скрипта знайдіть сторінку з кнопками Запросити, це може бути:"
+},
+"business_suite": {
+	"message": "Business Suite (вкладки 'Дописи й відео Reels' або 'Стрічка і сітка')"
+},
+"insights_new": {
+	"message": "Статистика (нове)"
+},
+"photos_album": {
+	"message": "Світлини (спочатку відкрийте альбом)"
+},
+"home_tab": {
+	"message": "Home (посилання виглядає так: facebook.com/назвасторінки)"
+},
+"inbox_tab": {
+	"message": "Вхідні"
+},
+"inbox_plus_tab": {
+	"message": "Вхідні+ (перейдіть у коментарі)"
+},
+"creator_studio": {
+	"message": "Creator Studio (стрічка)"
+},
+"notifications_tab": {
+	"message": "<a href=\"https://www.facebook.com/professional_dashboard/content/content_library/\">Професійна панель</a>, Мій контент (у Групах)"
+},
+"run_script_there": {
+	"message": "І запустіть скрипт там. Варто спробувати декілька вкладок, іноді FB не показує частину користувачів у деяких вкладках."
+},
+"check_old_video": {
+	"message": "Подивіться старий відеоприклад"
+},
+"contact_us_problems": {
+	"message": "Якщо помітите проблеми, надішліть версію скрипта і кілька скріншотів."
+},
+"pause_between_invites": {
+	"message": "Пауза між інвайтами"
+},
+"stop_after": {
+	"message": "Стоп після"
+},
+"invites_word": {
+	"message": "інвайтів"
+},
+"per_run": {
+	"message": "за запуск"
+},
+"per_day": {
+	"message": "на день"
+},
+"save_processed_posts": {
+	"message": "Зберігати опрацьовані пости"
+},
+"ignore_next_runs": {
+	"message": "і ігнорувати при наступних запусках (лише в деяких вкладках)."
+},
+"saved_posts": {
+	"message": "Збережені пости:"
+},
+"reset": {
+	"message": "Скинути."
+},
+"new_for_big_posts": {
+	"message": "Для ВЕЛИКИХ постів:"
+},
+"save_ram": {
+	"message": "економія RAM (видаляти оброблених лайкерів із пам’яті)"
+},
+"main_option_invite": {
+	"message": "ГОЛОВНА опція: інвайт лайкерів постів"
+},
+"to_like_page": {
+	"message": "поставити Like сторінці"
+},
+"trial_next_options_only_mpv": {
+	"message": "Наступні опції доступні лише у Multi-Pages версії:"
+},
+"like_shared_posts": {
+	"message": "Лайкати поширені пости"
+},
+"like_comments_shared_posts": {
+	"message": "Лайкати коментарі під поширеними постами"
+},
+"invite_likers_shared_posts": {
+	"message": "Інвайтити лайкерів поширених постів"
+},
+"only_shared_by_your_page": {
+	"message": "лише поширені вашою сторінкою"
+},
+"invite_who_liked_your_comments": {
+	"message": "Інвайтити тих, хто лайкнув ваші коментарі під поширеними постами"
+},
+"new": {
+	"message": "НОВЕ:"
+},
+"comment_all_shared_posts": {
+	"message": "Коментувати всі поширені пости"
+},
+"set_text_at_least_5_chars": {
+	"message": "(встановіть текст, мінімум 5 символів на фразу)"
+},
+"set_text_link": {
+	"message": "Встановити текст"
+},
+"use_user_name_in_text": {
+	"message": "Можна використовувати ім’я користувача в тексті:"
+},
+"example_user_name_title": {
+	"message": "Приклад: ім’я постера Alessandro del Piero. Можна використовувати:\n%name1% – виведе 'Alessandro del Piero' (повне ім’я)\n%name2% – виведе 'Alessandro' (перше слово імені)\n%name3% – виведе 'Piero' (останнє слово імені)\nПриклад: Hello, %name2%! Some useful text here."
+},
+"spintax": {
+	"message": "Spintax"
+},
+"spintax_supported": {
+	"message": "підтримується!"
+},
+"one_phrase_random": {
+	"message": "Якщо встановити більше 1 фрази – одна з них буде обрана випадково."
+},
+"example": {
+	"message": "Приклад:"
+},
+"example_comment_text": {
+	"message": "{Hello|Hi}, %name2%, thank you for sharing! :)"
+},
+"pause": {
+	"message": "Пауза"
+},
+"after_each_comment": {
+	"message": "після кожного коментаря"
+},
+"from": {
+	"message": "від"
+},
+"to": {
+	"message": "до"
+},
+"seconds": {
+	"message": "сек"
+},
+"how_to_select_few_posts": {
+	"message": "<span style=\"color:red\">як вибрати лише кілька постів?</span> Працює в Creator Studio для старих сторінок"
+},
+"what_is_difference": {
+	"message": "яка різниця?"
+},
+"full_scan": {
+	"message": "Повне сканування"
+},
+"full_scan_desc": {
+	"message": "сканує ВСІ пости на сторінці і зупиняється"
+},
+"real_time": {
+	"message": "Реальний час"
+},
+"real_time_desc": {
+	"message": "за замовчуванням сканує 5 нових постів, робить паузу і знову сканує їх по колу"
+},
+"check_video_example": {
+	"message": "Подивитись відеоприклад"
+},
+"invites_sent_last_24h": {
+	"message": "Інвайтів надіслано за останні 24 год:"
+},
+"invites_sent_last_30d": {
+	"message": "Інвайтів надіслано за останні 30 днів:"
+},
+"counting_days_only": {
+	"message": "(рахується лише за $1 дн.)"
+},
+"profile_page_warning": {
+	"message": "УВАГА! Ви запустили скрипт на сторінці profile.php, це дуже стара версія і може не працювати. Запустіть скрипт в іншій вкладці!"
+},
+"too_many_add_friend_buttons": {
+	"message": "Проблема!\r\nВидно занадто багато кнопок \"Add Friend\". Має бути \"Invite\".\r\n\r\nВідкрийте іншу вкладку, де є кнопки Invite, і запустіть скрипт там. Не знаходите? Ви використовуєте правильний профіль? Спробуйте змінити профіль, щоб він відповідав сторінці. Або зверніться до Facebook, щоб увімкнули функцію Invite для вашої сторінки: https://www.facebook.com/business/help"
+},
+"creator_studio_home_error": {
+	"message": "ПОМИЛКА! Ви у вкладці HOME Creator Studio, тут немає постів!<br><b>ВІДКРИЙТЕ Creator Studio -> Content Library -> Posts і запустіть скрипт там. Або іншу підтримувану вкладку: Home, Notifications, новий Business Suite тощо</b>"
+},
+"confirm_likers_list": {
+	"message": "Виявлено відкритий список. Якщо це список лайкерів і потрібно інвайтити лише їх – натисніть OK. Якщо це поширений пост – натисніть Cancel для наступного кроку."
+},
+"confirm_shared_posts_scan": {
+	"message": "Відкриті поширені пости. Щоб сканувати ЛИШЕ поширені – натисніть OK. Якщо Cancel – закриємо їх і проскануємо сторінку як звичайно. Сканування поширених постів працює лише англійською мовою Facebook.\r\nБуде використано наступну назву сторінки (якщо некоректно – запустіть в іншій вкладці або встановіть налаштування для коментарів за замовчуванням): %s"
+},
+"invite_like_disabled": {
+	"message": "УВАГА: перевірте Налаштування, вимкнено Invite і Like!"
+},
+"only_shared_posts_enabled": {
+	"message": "УВАГА: увімкнено режим ЛИШЕ поширених постів. Запускайте розширення в Business Suite, Facebook має бути англійською!"
+},
+"run_in_supported_tabs": {
+	"message": "Увага! Рекомендуємо запускати скрипт у Business Suite, Publishing tools, Creator Studio, вкладці Ads manager. Якщо на сторінці відкрито більш ніж 1 пост – скрипт працює некоректно."
+},
+"facebook_notifications_url_warning": {
+	"message": "Увага! Facebook може відкривати пости в новій сторінці, і якщо так сталось: змініть URL вкладки Notifications з business.facebook на www.facebook (Facebook не має доступу до свого домену з business-домену)"
+},
+"friends_invite_result": {
+	"message": "ІНВАЙТ ДРУЗІВ: %s з %s друзів заінвайчено. Спробуйте також інвайтити фанів (хто лайкав пости)!"
+},
+"inviting_everyone_in_list_full": {
+	"message": "Інвайтимо всіх у списку (Ліміт = %s)... вже заінвайчено %s..."
+},
+"friends_list_scroll_limit": {
+	"message": "Ліміт %s спроб прокрутки для цього списку друзів"
+},
+"all_friends_selected_button": {
+	"message": "Усіх друзів вибрано, тепер можна перевірити список і натиснути \"Send Invites\" (%s)"
+},
+"didnt_find_posts_reload": {
+	"message": ". Помилка: не знайдено постів після перезавантаження. Повторна спроба через 1 хв. Чекайте..."
+},
+"home_tab_no_posts": {
+	"message": "ПОМИЛКА! Ви у вкладці HOME Creator Studio, тут немає постів! ВІДКРИЙТЕ Creator Studio -> Content Library -> Posts."
+},
+"no_posts_in_content_library": {
+	"message": "ПОМИЛКА! Постів не видно! Відкрили Content Library -> Posts? Запустіть там, або натисніть \"?\" і виберіть \"Go back to Publishing tools tab\", так матимете доступ до ОБОХ інструментів і зможете запустити скрипт знову."
+},
+"no_posts_found_err2": {
+	"message": "ПОМИЛКА! Постів не знайдено! Запустіть скрипт у Business Suite, Inbox+, Home або Notifications, де видно список постів! Якщо щось не так – напишіть %s з деталями. [err 2]"
+},
+"extension_stopped_shared_posts": {
+	"message": "<span style=\"color:red\">Розширення зупинено. Сканували лише відкриті поширені пости.</span><br>"
+},
+"extension_stopped_visible_likers": {
+	"message": "<span style=\"color:red\">Розширення зупинено. Сканували лише видимий список лайкерів.</span><br>"
+},
+"extension_stopped_fb_popup": {
+	"message": "<span style=\"color:red\">Розширення зупинено. Виявлено спливаюче повідомлення Facebook.</span><br>"
+},
+"fb_popup_report": {
+	"message": "Помилка: показано спливаюче повідомлення Facebook. <b>Натисніть 'let us know' і повідомте Facebook</b>, зачекайте 24 год і спробуйте знову. Це нормальне обмеження, трапляється навіть при ручних діях.<br>"
+},
+"daily_limit_zero": {
+	"message": "Перевірте Налаштування -> Денний ліміт -> Ліміт для однієї сторінки. Якщо встановлено 0 – інвайти для цієї сторінки не надсилатимуться."
+},
+"pause_before_time": {
+	"message": ".<br>Пауза (встановлено в налаштуваннях) кожні %s інвайтів на %s хв (+- 1%). Продовження о "
+},
+"reactions_scanned_current": {
+	"message": ". Проскановано реакцій (лише для поточної реакції): "
+},
+"reactions_scanned": {
+	"message": ". Проскановано реакцій: "
+},
+"list_scrolled": {
+	"message": ". Список прокручено: "
+},
+"see_more_clicked": {
+	"message": ". Кнопка ’See more’ натиснута: "
+},
+"not_commented_antispam": {
+	"message": ". НЕ прокоментовано (антиспам): "
+},
+"shared_posts_comments_liked": {
+	"message": ". Лайкнуто коментарів під поширеними постами: "
+},
+"shared_posts_commented": {
+	"message": ". Прокоментовано поширених постів: "
+},
+"page_checked_text": {
+	"message": ". Сторінка: $1 (випадковий порядок)"
+},
+"disabled_in_options": {
+	"message": "ВИМКНЕНО в опціях"
+},
+"scrolls": {
+	"message": "Прокрутки:"
+},
+"script_scanned_selected_posts": {
+	"message": " Скрипт просканував лише вибрані вами пости. "
+},
+"publishing_tools_tabs_checked": {
+	"message": "Перевірено вкладки Publishing Tools:"
+},
+"scrolls_in_creator_studio": {
+	"message": "Прокрутки в Creator Studio:"
+},
+"scrolls_in_content_management": {
+	"message": "Прокрутки в Content Management:"
+},
+"scrolls_in_business_suite": {
+	"message": "Прокрутки в Business Suite:"
+},
+"scrolls_in_new_publishing_tools": {
+	"message": "Прокрутки у вкладці нових Publishing Tools:"
+},
+"scrolls_in_inbox": {
+	"message": "Прокрутки в Inbox:"
+},
+"shared_posts_liked": {
+	"message": ". Вподобано поширені пости: "
+},
+"reactions_scanned_for_post": {
+	"message": "Реакції, проскановані для цього поста:"
+},
+"started_time": {
+	"message": "Скрипт запущено о"
+},
+"stopped_time": {
+	"message": "Скрипт зупинено о"
+},
+"please_give_5_stars": {
+	"message": "Будь ласка, поставте нам 5 зірок"
+},
+"view_all_scripts": {
+	"message": "Переглянути всі наші скрипти"
+},
+"email_me": {
+	"message": "Написати на email"
+},
+"lc_not_active2": {
+	"message": ">> Ліцензія НЕ активна. Натисніть тут, щоб керувати ліцензією <<"
+},
+"lc_paid_active": {
+	"message": ">> ПЛАТНА версія. Натисніть тут, щоб керувати ліцензією <<"
+},
+"lc_paid_not_active": {
+	"message": ">> ПЛАТНА версія НЕ активна. Натисніть тут, щоб керувати ліцензією <<"
+},
+"lc_trial_ended": {
+	"message": ">> БЕЗКОШТОВНИЙ ПЕРІОД ЗАВЕРШЕНО.<br>Натисніть тут, щоб керувати ліцензією <<"
+},
+"lc_trial_active": {
+	"message": ">> БЕЗКОШТОВНИЙ ПЕРІОД. Натисніть тут, щоб керувати ліцензією <<"
+},
+"lc_try_3days": {
+	"message": "<b>Спробуйте будь-який наш скрипт безкоштовно протягом 3 днів, а потім придбайте ліцензію на <a href=\"https://www.invitelikecomment.com/en/\" target=\"_blank\">нашому сайті</a>.</b>"
+},
+"lc_trial_over": {
+	"message": "<b>Безкоштовний період завершено, придбайте ліцензію на <a href=\"https://www.invitelikecomment.com/en/\" target=\"_blank\">нашому сайті</a>.</b>"
+},
+"lc_code_label": {
+	"message": "Ваш ліцензійний код:"
+},
+"lc_insert_label": {
+	"message": "Введіть ліцензійний код (втратили? Використайте email, якщо додавали раніше):"
+},
+"lc_save_button": {
+	"message": "Зберегти"
+},
+"lc_purchase_website": {
+	"message": "<b>Ви можете придбати його на <a href=\"https://www.invitelikecomment.com/en/\" target=\"_blank\">нашому сайті</a>.</b>"
+},
+"lc_trial_over2": {
+	"message": "Період завершено"
+},
+"lc_purchase_needed": {
+	"message": "потрібно придбати скрипт, щоб використовувати ВСІ функції."
+},
+"lc_one_post_option": {
+	"message": "Або відкрийте список вподобань і запустіть скрипт, щоб сканувати лише цей пост."
+},
+"lc_less_than_1_day": {
+	"message": "менше ніж 1 день."
+},
+"lc_days": {
+	"message": "дн."
+},
+"lc_trial_active2": {
+	"message": "БЕЗКОШТОВНИЙ 3-ДЕННИЙ ПЕРІОД активний"
+},
+"lc_try_without_limitations": {
+	"message": "спробуйте скрипт з обмеженою кількістю запрошень (платна версія без обмежень)."
+},
+"lc_trial_expires": {
+	"message": "Період завершується через"
+},
+"lc_wrong_script": {
+	"message": "НЕПРАВИЛЬНИЙ СКРИПТ для цієї ліцензії"
+},
+"lc_license_for": {
+	"message": "Це ліцензія для"
+},
+"lc_download_correct": {
+	"message": "Відкрити"
+},
+"lc_wrong_license_contact": {
+	"message": "та завантажити правильний скрипт. Якщо придбали неправильну ліцензію, напишіть нам на email:"
+},
+"lc_check_license_or_contact": {
+	"message": "Перевірте придбану ліцензію або зв’яжіться з нами через email"
+},
+"lc_license_status": {
+	"message": "Статус ліцензії"
+},
+"lc_active": {
+	"message": "АКТИВНА"
+},
+"lc_expiring_soon": {
+	"message": "скоро завершується"
+},
+"lc_expired": {
+	"message": "ЗАВЕРШЕНА"
+},
+"lc_not_active": {
+	"message": "НЕ АКТИВНА"
+},
+"lc_expire_date": {
+	"message": "Дата завершення"
+},
+"lc_license_type": {
+	"message": "Тип ліцензії"
+},
+"lc_individual": {
+	"message": "Індивідуальна (НЕ для бізнесу)"
+},
+"lc_business": {
+	"message": "Бізнес (3 користувачі)"
+},
+"lc_corporate": {
+	"message": "Корпоративна (10 користувачів)"
+},
+"lc_license_duration": {
+	"message": "Тривалість ліцензії"
+},
+"lc_1_month": {
+	"message": "1 місяць"
+},
+"lc_1_year": {
+	"message": "1 рік"
+},
+"lc_2_years": {
+	"message": "2 роки"
+},
+"lc_forever": {
+	"message": "Назавжди"
+},
+"lc_canceled_subscription": {
+	"message": "Ви скасували підписку. Якщо виникли проблеми зі скриптом – зв’яжіться з нами через email:"
+},
+"lc_last_msg_error": {
+	"message": "Останнє повідомлення від сервера верифікації:"
+},
+"lc_your_code": {
+	"message": "Ваш ліцензійний код:"
+},
+"lc_insert_code": {
+	"message": "Введіть ліцензійний код (втратили? Використайте email, якщо додали раніше):"
+},
+"lc_add_email": {
+	"message": "Додайте свій email, щоб відновити код у разі втрати"
+},
+"lc_enter_email": {
+	"message": "Введіть email:"
+},
+"lc_receive_license": {
+	"message": "Отримати email за 1 тиждень до завершення ліцензії/підписки"
+},
+"lc_receive_news": {
+	"message": "Отримувати важливі новини про наші скрипти (рідко, максимум 2-3 на РІК)"
+},
+"lc_never_share_email": {
+	"message": "Ми ніколи не будемо використовувати, продавати або передавати ваш email. Основна мета – допомогти відновити код у разі втрати."
+},
+"lc_remove_license": {
+	"message": "Видалити ліцензію"
+},
+"lc_save": {
+	"message": "Зберегти"
+},
+"lc_validating_license": {
+	"message": "Перевіряємо вашу ліцензію. Зачекайте кілька секунд. Якщо триває занадто довго, спробуйте пізніше. Не використовуйте VPN."},
+"lc_searching_license": {
+	"message": "Шукаємо вашу ліцензію..."
+},
+"lc_unknown_error": {
+	"message": "НЕВІДОМА ПОМИЛКА: якщо бачите це і не отримали email – зв’яжіться з нами: "
+},
+"lc_close_menu": {
+	"message": ">> Натисніть тут, щоб ЗАКРИТИ меню ліцензії <<"
+},
+"lc_scanning_post": {
+	"message": ">> Зачекайте, ми скануємо пост в окремій вкладці <<"
+},
+"lc_server_update_msg": {
+	"message": "FB INVITER: код оновлено. Перезавантажте сторінку та спробуйте знову. Повідомлення від сервера: "
+},
+"lc_server_update": {
+	"message": "FB INVITER: код оновлено. Перезавантажте сторінку та спробуйте знову."
+},
+"lc_server_received_msg": {
+	"message": "FB INVITER: Отримано повідомлення від сервера: "
+},
+"lc_scanning_posts": {
+	"message": "Скануємо ваші пости..."
+},
+"lc_invite_failed": {
+	"message": "Після 3 спроб натиснути кнопку 'ЗАПРОСИТИ' сервер не прийняв запит. Можливо, досягнуто денний ліміт, або є тимчасові обмеження чи затримка. Спробуйте натиснути вручну або зачекайте 24 год. Якщо запрошення працює вручну, зв’яжіться з нами через email (зробіть повний скриншот цієї сторінки і додайте версію скрипта).<br>"
+},
+"phrase_or": {
+	"message": "або"
+},
+"phrase_version": {
+	"message": "версія:"
+},
+"facebook_ram_tip": {
+    "message": "💡 <span style=\"color:red\"><b>Порада:</b></span> Facebook може використовувати багато оперативної пам’яті. Помилки \"Aw, Snap!\" (особливо на ноутбуках) зазвичай означають нестачу пам’яті. Якщо ви отримаєте цю помилку — спробуйте <b>браузер EDGE</b> або закрийте інші вкладки."
+}
+}
