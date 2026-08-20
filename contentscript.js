@@ -2382,7 +2382,7 @@ if (document.location.href.indexOf("facebook.com") > -1 && !doNotStartNowFix && 
                           (psNotif1 = Number(e.psNotif1)),
                           (psNotif2 = Number(e.psNotif2)),
                           (psmessagelast = e.psmessagelast),
-                          (psscr = e.psscr) && "pro" == psscr && (multiPagesAct = !1),
+                          (psscr = "mul"), /* open-source build: no license tiers, build identity fixed */
                           (pstype = e.pstype),
                           (psdura = e.psdura),
                           (psactive = Number(e.psactive)),
@@ -5565,9 +5565,7 @@ function do3() {
                             }, 4e3))
                           : (debug && console.log("go to do4"), do4()));
 }
-function tryToLoadNewClassesFromServer() {
-    api.runtime.sendMessage({ type: "LoadClassesFromServer" }, function (e) {});
-}
+function tryToLoadNewClassesFromServer() {}
 var previousIncrease1 = 800,
     previousIncrease2 = 0;
 function do4() {
@@ -9109,7 +9107,7 @@ function inviteNext3(e, t, n) {
         )
             if (
                 (e > canSKIPButton && (canSKIPButton = e),
-                mtotalInvited >= fb_limit || psInvTot > 299 || (psInvTotDay >= fb_limit && "day" == stopWhen))
+                mtotalInvited >= fb_limit || (psInvTotDay >= fb_limit && "day" == stopWhen))
             )
                 (3 != runMode && 4 != runMode) ||
                 !try_after_limit ||
@@ -9117,12 +9115,6 @@ function inviteNext3(e, t, n) {
                 weAreScanningOnlyShared
                     ? (console.log("Stop, debug: 7"), stopScript())
                     : (debug && console.log("next page 16"), open_next_page());
-            else if (
-                (psInvTot > 99 && (11 == psCurRunType || 99 == psCurRunType)) ||
-                (psInvTot > 49 && 9 == psCurRunType) ||
-                (psInvTot > 299 && 10 == psCurRunType)
-            )
-                stopScript();
             else if ((3 == runMode || 4 == runMode) && fb_lim_this_page_counter >= fb_limit_multi)
                 0 == fb_limit_multi && alert(api.i18n.getMessage("daily_limit_zero")),
                     debug && console.log("next page 17"),
@@ -9538,7 +9530,7 @@ function inviteNextNewUI(e, t, n) {
                     ? (e > 0 || 0 == likeButtonsProcessed) && likeButtonsProcessed++
                     : (e > likeButtonsProcessed || e == likeButtonsProcessed) && (likeButtonsProcessed = e + 1),
                 e > canSKIPButton && !deleteInvitersLocal && (canSKIPButton = e),
-                mtotalInvited >= fb_limit || psInvTot > 299 || (psInvTotDay >= fb_limit && "day" == stopWhen))
+                mtotalInvited >= fb_limit || (psInvTotDay >= fb_limit && "day" == stopWhen))
             )
                 (3 != runMode && 4 != runMode) ||
                 !try_after_limit ||
@@ -9546,12 +9538,6 @@ function inviteNextNewUI(e, t, n) {
                 weAreScanningOnlyShared
                     ? (console.log("Stop, debug: 7"), stopScript())
                     : (debug && console.log("next page 20"), open_next_page());
-            else if (
-                (psInvTot > 99 && (11 == psCurRunType || 99 == psCurRunType)) ||
-                (psInvTot > 49 && 9 == psCurRunType) ||
-                (psInvTot > 299 && 10 == psCurRunType)
-            )
-                stopScript();
             else if ((3 == runMode || 4 == runMode) && fb_lim_this_page_counter >= fb_limit_multi)
                 0 == fb_limit_multi && alert(api.i18n.getMessage("daily_limit_zero")),
                     debug && console.log("next page 21"),
@@ -10266,98 +10252,8 @@ function stopScript(e) {
         0 == totalPostsProcessed &&
             likeButtonsProcessed > 100 &&
             (t = t + ". " + api.i18n.getMessage("reactions_scanned_for_post") + " " + likeButtonsProcessed),
-        psInvTot > 99 && (11 == psCurRunType || 99 == psCurRunType)
-            ? showAlert(
-                  s +
-                      api.i18n.getMessage("stopped_time") +
-                      " " +
-                      ("0" + o.getHours()).slice(-2) +
-                      ":" +
-                      ("0" + o.getMinutes()).slice(-2) +
-                      ":" +
-                      ("0" + o.getSeconds()).slice(-2) +
-                      ".<br>" +
-                      e +
-                      api.i18n.getMessage("total_inv_sent") +
-                      " " +
-                      mtotalInvited +
-                      n +
-                      ". " +
-                      api.i18n.getMessage("posts_checked") +
-                      " " +
-                      totalPostsProcessed +
-                      t +
-                      '.<br><br><span style="color:red"><b>' +
-                      api.i18n.getMessage("pLocN" + getNrLoc(1)) +
-                      ".</b> " +
-                      api.i18n.getMessage("pLocN2").replace(/%s/g, ((i = [100]), () => i.shift())) +
-                      ".</span>"
-              )
-            : psInvTot > 49 && 9 == psCurRunType
-              ? showAlert(
-                    s +
-                        api.i18n.getMessage("stopped_time") +
-                        " " +
-                        ("0" + o.getHours()).slice(-2) +
-                        ":" +
-                        ("0" + o.getMinutes()).slice(-2) +
-                        ":" +
-                        ("0" + o.getSeconds()).slice(-2) +
-                        ".<br>" +
-                        e +
-                        api.i18n.getMessage("total_inv_sent") +
-                        " " +
-                        mtotalInvited +
-                        n +
-                        ". " +
-                        api.i18n.getMessage("posts_checked") +
-                        " " +
-                        totalPostsProcessed +
-                        t +
-                        '.<br><br><span style="color:red"><b>' +
-                        api.i18n.getMessage("pLocN" + getNrLoc(1)) +
-                        ".</b> " +
-                        api.i18n.getMessage("pLocN2").replace(
-                            /%s/g,
-                            (
-                                (e) => () =>
-                                    e.shift()
-                            )([50])
-                        ) +
-                        ".</span>"
-                )
-              : psInvTot > 299 && 10 == psCurRunType
-                ? showAlert(
-                      s +
-                          api.i18n.getMessage("stopped_time") +
-                          " " +
-                          ("0" + o.getHours()).slice(-2) +
-                          ":" +
-                          ("0" + o.getMinutes()).slice(-2) +
-                          ":" +
-                          ("0" + o.getSeconds()).slice(-2) +
-                          ".<br>" +
-                          e +
-                          api.i18n.getMessage("total_inv_sent") +
-                          " " +
-                          mtotalInvited +
-                          n +
-                          ". " +
-                          api.i18n.getMessage("posts_checked") +
-                          " " +
-                          totalPostsProcessed +
-                          t +
-                          '.<br><br><span style="color:red">' +
-                          api.i18n.getMessage("pLocN2").replace(
-                              /%s/g,
-                              (
-                                  (e) => () =>
-                                      e.shift()
-                              )([300])
-                          ) +
-                          ".</span>"
-                  )
-                : mtotalInvited > fb_limit - 2
+        // open-source build: trial-cap messages removed
+        mtotalInvited > fb_limit - 2
                   ? showAlert(
                         (3 == runMode || 4 == runMode) && nextPage > 0 && !multi_random_order
                             ? s +
@@ -10764,45 +10660,11 @@ function saveLicSettingsContent() {
     );
 }
 function calcLicVars() {
-    0 == psfTr
-        ? ((psfTr = psCurTimeStamp + 259200), (psCurRunType = 10), saveLicSettingsContent())
-        : psCurTimeStamp > psfTr && -1 != psfTr
-          ? ((psfTr = -1), (psCurRunType = 11), saveLicSettingsContent())
-          : -1 == psfTr && (psCurRunType = 11),
-        0 == pswork &&
-            -1 != psfTr &&
-            (debug && console.log("This is trial, we can work!"), (pswork = 1), (psCurRunType = 10)),
-        debug && console.log("ex-pire:" + psexp),
-        20 == pslicID.length &&
-            psexp &&
-            psexp > 0 &&
-            (debug && console.log("WE ARE HERE:" + psexp),
-            !(psCurTimeStamp > psexp || 1 != psactive) || (psscr != psThisScr && "fp" != psscr && psscr != psThisScr2)
-                ? (psscr == psThisScr || psscr == psThisScr2
-                      ? ((pswork = 1), (psCurRunType = 1))
-                      : "fp" == psscr
-                        ? ((pswork = 1), (psCurRunType = 2))
-                        : (psCurRunType = 99),
-                  "pro" == psscr && (multiPagesAct = !1))
-                : psCurTimeStamp - psexp > 259200 || 1 != psactive || (psCurTimeStamp > psexp && 1 == psrenewCanc)
-                  ? ((pswork = 0), (psCurRunType = 9))
-                  : psscr == psThisScr || psscr == psThisScr2
-                    ? ((pswork = 1), (psCurRunType = 5))
-                    : "fp" == psscr
-                      ? ((pswork = 1), (psCurRunType = 6))
-                      : (psCurRunType = 99)),
-        getBrowser(),
-        1 == pswork && (psInvTot = 0),
-        debug &&
-            (console.log("psCurRunType=" + psCurRunType),
-            console.log(
-                "TODO pswork=" +
-                    pswork +
-                    ". TEST if license expired + trial and if trial expired and license NOT present at all"
-            ));
+    // open-source build: license checks removed, always treated as fully enabled
+    (pswork = 1), (psCurRunType = 1), (psInvTot = 0);
 }
 function psupdateFrameWithNewLicenseInfo(e) {
-    if (_psShowLicFrame && $(".licDiv").length > 0) {
+    if (!1) { /* open-source build: license UI removed */
         debug && console.log("WE ARE UPDATING THE SCREEN!!!!!!!!========================================="),
             (psdivtitle = api.i18n.getMessage("lc_not_active2")),
             1 == psCurRunType || 2 == psCurRunType || 5 == psCurRunType || 6 == psCurRunType
@@ -11072,7 +10934,9 @@ function psupdateFrameWithNewLicenseInfo(e) {
     }
 }
 function licWorking() {
-    if ((debug && console.log("SO CAN WE WORK? " + pswork), 1 == pswork)) return !0;
+    // open-source build: license checks removed, always allowed to run
+    return !0;
+    /* license gate disabled */ if ((debug && console.log("SO CAN WE WORK? " + pswork), 1 == pswork)) return !0;
     (weAreScanningOnlyInvites = !1),
         (psels = getElem(".uiScrollableAreaWrap ._5i_p .uiList._4kg", ".hidden_elem .uiList._4kg")
             .find("._5i_q ._6a._6b button._51sy,._5i_q ._6a._6b a._51sy")
@@ -11103,36 +10967,11 @@ function licWorking() {
 function showEmailChangeSettings() {
     return (
         debug && console.log("psCurRunType=" + psCurRunType),
-        1 == psCurRunType || 2 == psCurRunType || 5 == psCurRunType || 6 == psCurRunType || 9 == psCurRunType
+        !1 /* open-source build: license settings removed */
     );
 }
-function getLicVarFromBackground(e) {
-    psShowWarningNotification(10, api.i18n.getMessage("lc_validating_license"));
-}
-function getLicVarFromBackgroundOLD(e) {
-    debug && console.log(e);
-    var t = psexp;
-    (psexp = e.psexp),
-        (psrenewCanc = e.psrenewCanc),
-        (pslicID = e.pslicID),
-        (psemailID = e.psemailID),
-        (psNotif1 = e.psNotif1),
-        (psNotif2 = e.psNotif2),
-        (psmessagelast = e.psmessagelast),
-        (psscr = e.psscr),
-        (pstype = e.pstype),
-        (psdura = e.psdura),
-        (psactive = e.psactive),
-        calcLicVars(),
-        psupdateFrameWithNewLicenseInfo(!0),
-        cleanWarningNotification(),
-        (1 == psCurRunType || 2 == psCurRunType) &&
-            0 == t &&
-            psexp > 0 &&
-            ("" == psemailID
-                ? alert(api.i18n.getMessage("pLocN" + getNrLoc(5)))
-                : alert(api.i18n.getMessage("pLocN" + getNrLoc(6))));
-}
+function getLicVarFromBackground(e) {}
+function getLicVarFromBackgroundOLD(e) {}
 function psShowWarningNotification(e, t) {
     if ((clearTimeout(notifTimerRelease), $(".warning-notification").length > 0)) {
         var n = '<p style="margin:0;">\n\t' + t + "\n\t</p>";
@@ -11147,22 +10986,8 @@ function cleanWarningNotification() {
         $(".warning-notification").length > 0 &&
             ($(".warning-notification").html(""), $(".warning-notification").hide());
 }
-function getLicVarFromBackgroundEMAILrestore(e) {
-    psShowWarningNotification(10, api.i18n.getMessage("lc_searching_license"));
-}
-function getLicVarFromBackgroundEMAILrestoreOLD(e) {
-    debug && console.log(e),
-        (pslicID = ""),
-        (psCurRunType = 0),
-        (pswork = 0),
-        e.result && e.result.length > 0 && e.message
-            ? alert(e.result + ": " + e.message)
-            : alert(api.i18n.getMessage("lc_unknown_error") + _email),
-        (psmessagelast = e.message),
-        calcLicVars(),
-        psupdateFrameWithNewLicenseInfo(!0),
-        cleanWarningNotification();
-}
+function getLicVarFromBackgroundEMAILrestore(e) {}
+function getLicVarFromBackgroundEMAILrestoreOLD(e) {}
 function cleanLicVariables() {
     (psexp = 0),
         (psrenewCanc = 0),
@@ -11178,69 +11003,12 @@ function cleanLicVariables() {
         (pswork = 0),
         (psCurRunType = 0);
 }
-function removeLicense() {
-    cleanLicVariables(),
-        api.runtime.sendMessage({ mode: "resLic" }, function (e) {
-            updAfterRemove(e);
-        });
-}
+function removeLicense() {}
 function updAfterRemove(e) {
     calcLicVars(), psupdateFrameWithNewLicenseInfo(!0);
 }
-function saveLicense() {
-    -1 == $('input[name="tab_license_insert"]').val().trim().indexOf('"') &&
-    -1 == $('input[name="tab_license_insert"]').val().trim().indexOf("'") &&
-    $('input[name="tab_license_insert"]').val().trim().length > 1
-        ? 20 == $('input[name="tab_license_insert"]').val().trim().length ||
-          $('input[name="tab_license_insert"]').val().trim().indexOf("@") > 0
-            ? (pslicID != $('input[name="tab_license_insert"]').val().trim() && cleanLicVariables(),
-              (pslicID = $('input[name="tab_license_insert"]').val().trim()),
-              $('input[name="tab_license_insert"]').val(pslicID),
-              _psmaxtries1 > 6 && parseInt(Math.floor(Date.now() / 1e3)) < _psmaxtries2 + 30
-                  ? alert(api.i18n.getMessage("pLocN" + getNrLoc(7)))
-                  : ($("#ps_email").length > 0 && (psemailID = $("#ps_email").val().trim()),
-                    $("#ps_subscription").length > 0 && (psNotif1 = $("#ps_subscription").prop("checked") ? 1 : 0),
-                    $("#ps_news").length > 0 && (psNotif2 = $("#ps_news").prop("checked") ? 1 : 0),
-                    _psmaxtries1++,
-                    (_psmaxtries2 = parseInt(Math.floor(Date.now() / 1e3))),
-                    -1 == psemailID.indexOf("@") && (psemailID = ""),
-                    pslicID.indexOf("@") > 0
-                        ? api.runtime.sendMessage(
-                              {
-                                  mode: "vLic",
-                                  pslicID: pslicID,
-                                  psemailID: psemailID,
-                                  psNotif1: psNotif1,
-                                  psNotif2: psNotif2,
-                              },
-                              function (e) {
-                                  getLicVarFromBackgroundEMAILrestore(e);
-                              }
-                          )
-                        : api.runtime.sendMessage(
-                              {
-                                  mode: "vLic",
-                                  pslicID: pslicID,
-                                  psemailID: psemailID,
-                                  psNotif1: psNotif1,
-                                  psNotif2: psNotif2,
-                              },
-                              function (e) {
-                                  getLicVarFromBackground(e);
-                              }
-                          )))
-            : $('input[name="tab_license_insert"]').val().trim().length < 2
-              ? alert(api.i18n.getMessage("pLocN" + getNrLoc(8)))
-              : alert(api.i18n.getMessage("pLocN" + getNrLoc(9)))
-        : 20 == pslicID.length && "" == $('input[name="tab_license_insert"]').val().trim()
-          ? delLicense()
-          : alert(api.i18n.getMessage("pLocN" + getNrLoc(10)));
-}
-function delLicense() {
-    psexp > psCurTimeStamp && 1 == psactive
-        ? confirm(api.i18n.getMessage("pLocN" + getNrLoc(11))) && removeLicense()
-        : removeLicense();
-}
+function saveLicense() {}
+function delLicense() {}
 function openCloseDivLic() {
     $("#fp_att").is(":visible")
         ? ($("#fp_att").hide(), $("#licDivTitle").text(psdivtitle))
