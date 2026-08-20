@@ -1,4 +1,7 @@
 {
+"inv_limit_error": {
+	"message": "Error: Facebook showed a limitation dialog (\"You may be misusing this feature by going too fast\"). Wait 24 hours before trying again, or increase the pause between invites in the options."
+},
 "small_name": {
 	"message": "m1"
 },

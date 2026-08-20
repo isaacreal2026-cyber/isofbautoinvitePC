@@ -1,4 +1,7 @@
 {
+"inv_limit_error": {
+	"message": "Error: Facebook mostró un diálogo de límite (\"Puede que esté abusando de esta función yendo demasiado rápido\"). Espera 24 horas antes de reintentar o aumenta la pausa entre invitaciones en las opciones."
+},
 "small_name": {
 	"message": "m1"
 },
