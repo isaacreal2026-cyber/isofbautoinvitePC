@@ -1,4 +1,7 @@
 {
+"inv_limit_error": {
+	"message": "Erreur : Facebook a affiché un avertissement de limite (« Vous abusez peut-être de cette fonction en allant trop vite »). Attendez 24 heures avant de réessayer ou augmentez la pause entre les invitations dans les options."
+},
 "small_name": {
 	"message": "m1"
 },

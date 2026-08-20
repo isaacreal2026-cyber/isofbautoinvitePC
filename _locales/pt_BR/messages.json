@@ -1,4 +1,7 @@
 {
+"inv_limit_error": {
+	"message": "Erro: o Facebook exibiu uma mensagem de limite (\"Você pode estar abusando deste recurso indo rápido demais\"). Aguarde 24 horas antes de tentar novamente ou aumente a pausa entre os convites nas opções."
+},
 "small_name": {
 	"message": "m1"
 },

@@ -8,6 +8,10 @@ var scriptIsRunning,
     api = "undefined" != typeof chrome ? chrome : browser,
     debug = !1,
     userClickedOnIcon = !1;
+// open-source build: license checks removed, always allowed to run
+function licWorking() {
+    return true;
+}
 function getElem(e, t) {
     if (t) {
         if ($(e).not(t).length > 0) return $(e).not(t);
@@ -1676,7 +1680,7 @@ if (document.location.href.indexOf("facebook.com") > -1 && !doNotStartNowFix && 
                       (psNotif1 = Number(e.psNotif1)),
                       (psNotif2 = Number(e.psNotif2)),
                       (psmessagelast = e.psmessagelast),
-                      (psscr = e.psscr),
+                      (psscr = "mul"), /* open-source build: no license tiers, build identity fixed */
                       (pstype = e.pstype),
                       (psdura = e.psdura),
                       (psactive = Number(e.psactive)),
@@ -6144,7 +6148,7 @@ function inviteNext3(e, t, n) {
             (clickedForMore = 0),
             e < t.length)
         )
-            if ((e > canSKIPButton && (canSKIPButton = e), mtotalInvited + c_c1 >= fb_limit || psInvTot > 299))
+            if ((e > canSKIPButton && (canSKIPButton = e), mtotalInvited + c_c1 >= fb_limit))
                 (3 != runMode && 4 != runMode) ||
                 !try_after_limit ||
                 0 != weAreInvitingFromShared ||
@@ -6459,7 +6463,7 @@ function inviteNextNewUI(e, t, n) {
             if (
                 (e > likeButtonsProcessed && (likeButtonsProcessed = e + 1),
                 e > canSKIPButton && (canSKIPButton = e),
-                mtotalInvited + c_c1 >= fb_limit || psInvTot > 299)
+                mtotalInvited + c_c1 >= fb_limit)
             )
                 (3 != runMode && 4 != runMode) ||
                 !try_after_limit ||

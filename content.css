@@ -1,3 +1,14 @@
+/*
+ * isofbautoinvitePC — UI skin (open-source build)
+ * Presentation-only redesign. Every rule is scoped to an element the
+ * extension injects itself, so nothing leaks onto the host page.
+ *
+ * Design tokens
+ *   navy      #0B1F3F   primary blue  #1877F2   blue-dark  #1266D6
+ *   blue-lt   #2C8CFF   ink           #1F2937   muted      #6B7280
+ *   border    #D5DCE8   hairline      #E3E8EF   danger     #DC2626
+ *   success   #059669   card radius   18px      control    10px
+ */
 @charset "utf-8";
 @font-face {
     font-family: 'Roboto';
@@ -15,253 +26,425 @@
     unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
 }
 
+/* ================================================================
+   Main options card (.fbt)
+   ================================================================ */
 .fbt {
-    background: #f6f6f6;
-    border: 1px solid #26A69A;
-    border-radius: 5px;
-    box-shadow: 0px 0px 13px 1px #BBB;
+    background: #fff;
+    border: 1px solid rgba(15, 23, 42, 0.08);
+    border-radius: 18px;
+    box-shadow: 0 24px 60px -12px rgba(9, 18, 38, 0.35),
+                0 8px 20px -8px rgba(9, 18, 38, 0.18);
     display: block;
-    font-family: 'Roboto', sans-serif !important;
+    font-family: 'Roboto', 'Segoe UI', Tahoma, sans-serif !important;
     font-weight: 400;
     font-size: 14px;
-    /*height: 400px;*/
-    line-height: 20px;
-    right: 30px;
+    line-height: 1.55;
+    color: #1F2937;
+    overflow: hidden;
     position: fixed;
-    top: 5px;
-    width: 580px;
-    z-index: 999;
-}
-.fbt a {
-    color: #1877f2 !important;
-    text-decoration: underline;
-    transition: opacity 0.2s ease;
+    right: 24px;
+    top: 14px;
+    width: 620px;
+    max-width: calc(100vw - 32px);
+    z-index: 2147483647;
+    animation: fbe-pop 0.28s cubic-bezier(0.2, 0.9, 0.3, 1.2);
 }
 
-.fbt a:hover {
-    opacity: 0.75;
+@keyframes fbe-pop {
+    from { opacity: 0; transform: translateY(-10px) scale(0.985); }
+    to   { opacity: 1; transform: translateY(0)     scale(1); }
 }
-#whatsNewLink{
-	color: white !important; text-decoration: underline;"
+
+.fbt a {
+    color: #1877F2 !important;
+    text-decoration: none;
+    transition: opacity 0.15s ease;
 }
+
+.fbt a:hover { text-decoration: underline; }
+
+#whatsNewLink {
+    color: #fff !important;
+    text-decoration: none;
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.65);
+}
+
+#whatsNewLink:hover { border-bottom-style: solid; text-decoration: none; }
+
 .fbt button {
-    font-size: 14px;
+    font-family: inherit;
+    font-size: 13.5px;
     line-height: normal;
     transform: none;
 }
+
 .fbt input[type="checkbox"] {
-    vertical-align: middle;
+    width: 15px;
+    height: 15px;
     margin-right: 6px;
+    vertical-align: -2px;
+    accent-color: #1877F2;
+    cursor: pointer;
 }
 
 .fbt label {
     vertical-align: middle;
+    color: #374151;
 }
 
+/* ================================================================
+   Card header + close button
+   ================================================================ */
 .fbe-header {
-    background: #4267b2;
+    background: linear-gradient(120deg, #0B1F3F 0%, #123C7C 48%, #1877F2 100%);
     color: #fff;
     display: block;
-    height: 40px;
+    min-height: 52px;
     width: 100%;
+    position: relative;
 }
 
 .fbe-header h3 {
     color: #fff;
     font-size: 15px;
     font-weight: 700;
+    letter-spacing: 0.01em;
     margin: 0;
-    padding: 11px 16px;
+    padding: 15px 44px 15px 20px;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
 }
 
 .fbe-version {
-    font-size: 14px;
-    font-weight: normal;
+    font-size: 13px;
+    font-weight: 400;
     padding-left: 5px;
+    opacity: 0.85;
 }
 
 .fbe-btn-close {
     float: right;
     margin-top: -30px;
-    margin-right: 9px;
+    margin-right: 12px;
     cursor: pointer;
     color: #fff;
-    border: 1px solid #3eecff;
-    border-radius: 35px;
-    background: #3eecff;
-    font-size: 18px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.14);
+    font-size: 16px;
     font-weight: 700;
-    display: inline-block;
-    line-height: 0px;
-    padding: 8px 3px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    padding: 5px 0;
+    width: 26px;
+    height: 26px;
+    transition: background 0.15s ease, transform 0.15s ease;
+}
+
+.fbe-btn-close:hover {
+    background: #F04438;
+    border-color: #F04438;
+    transform: rotate(90deg);
 }
 
 .fbe-btn-close:before {
     content: "×";
 }
 
+/* ================================================================
+   Card body
+   ================================================================ */
 .fbe-content {
-    padding: 10px 10px 0 10px;
+    padding: 14px 22px 20px;
     text-align: center;
-    width: 560px;
+    width: auto;
+    box-sizing: border-box;
+}
+
+.fbe-content p {
+    text-align: left;
+    font-size: 13.5px;
+    line-height: 1.55;
+    color: #374151;
+    margin: 0 0 10px;
 }
 
 .fbe-intro {
-    padding: 10px 10px 1px 10px;
+    padding: 8px 2px;
+    text-align: left;
+    font-size: 13.5px;
+    line-height: 1.55;
+    color: #374151;
 }
 
-.fbe-intro-screen {
-    background: url('fbe-intro-free.png') #eeeeee;
-    border: 2px solid #e0e0e0;
-    /*height: 180px;*/
+.fbe-intro b { color: #111827; }
+
+.red-title {
+    color: #DC2626;
+    text-align: center;
+    font-size: 14.5px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    margin: 20px 0 4px;
+    position: relative;
 }
 
+.red-title:after {
+    content: "";
+    display: block;
+    width: 46px;
+    height: 3px;
+    border-radius: 999px;
+    margin: 7px auto 0;
+    background: linear-gradient(90deg, #1877F2, #DC2626);
+}
+
+.margin-top { margin-top: 22px; }
+
+.fbe-intro.imgdisp a img {
+    width: 100%;
+    height: auto;
+    display: none;
+    border-radius: 12px;
+    border: 1px solid #E3E8EF;
+    box-shadow: 0 10px 26px -8px rgba(9, 18, 38, 0.25);
+    margin-top: 8px;
+}
+
+/* ================================================================
+   Buttons
+   ================================================================ */
 .fbe-actions {
-    padding: 5px 0;
+    padding: 8px 0 10px;
     text-align: center;
 }
 
 .fbe-actions-main {
-    background: #ebebeb;
-    height: 75px;
-    margin: -30px -40px;
-    padding: 20px 30px;
+    background: transparent;
+    height: auto;
+    margin: 0;
+    padding: 8px 0;
 }
 
 .fbe-btn {
-    background: #4267b2;
-    border: 1px solid #4267b2;
-    border-radius: 5px;
-    box-shadow: 0px 0px 3px #004D40;
+    background: linear-gradient(180deg, #2C8CFF 0%, #1877F2 55%, #1266D6 100%);
+    border: 1px solid #0E5FCB;
+    border-radius: 12px;
+    box-shadow: 0 6px 16px -4px rgba(24, 119, 242, 0.55),
+                inset 0 1px 0 rgba(255, 255, 255, 0.28);
     cursor: pointer;
     text-align: center;
     vertical-align: middle;
-	
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 6px 20px;
+    padding: 10px 26px;
     height: auto;
+    font-family: 'Roboto', 'Segoe UI', Tahoma, sans-serif;
+    transition: transform 0.15s ease, box-shadow 0.15s ease, filter 0.15s ease;
 }
-.fbe-btn:hover{
-opacity: 0.8;
+
+.fbe-btn:hover {
+    filter: brightness(1.08);
+    transform: translateY(-1px);
+    box-shadow: 0 10px 22px -6px rgba(24, 119, 242, 0.65),
+                inset 0 1px 0 rgba(255, 255, 255, 0.28);
 }
-.btn-div{
-margin:3px 5px;
-display: inline-block;
+
+.fbe-btn:active {
+    transform: translateY(1px);
+    box-shadow: 0 3px 8px -2px rgba(24, 119, 242, 0.5);
 }
 
 .fbe-btn-text {
     color: #FFF;
     display: block;
     float: left;
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 1;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    line-height: 1.3;
     margin: 0;
 }
-.fbt button.delLic {
-    appearance: none;
-    -webkit-appearance: none;
 
+.btn-div {
+    margin: 6px 5px;
     display: inline-block;
-    padding: 6px 14px;
-
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 1;
-
-    color: #fff;
-    background: #e53935;
-    border: 1px solid #c62828;
-    border-radius: 4px;
-
-    cursor: pointer;
-    text-align: center;
-
-    box-shadow: 0 1px 2px rgba(0,0,0,0.2);
 }
 
-.fbt button.delLic:hover {
-    background: #d32f2f;
+/* primary "start" buttons */
+#fbe-ready {
+    border-radius: 999px;
+    padding: 13px 34px;
+    min-width: 230px;
+    font-size: 16px;
 }
 
-.fbt button.delLic:active {
-    background: #b71c1c;
-    transform: translateY(1px);
+#fbe-ready .fbe-btn-text { font-size: 16px; }
+
+/* disabled state */
+.fbe-btn.disabled,
+#fbe-ready.disabled {
+    background: linear-gradient(180deg, #EDF0F4, #DDE2E9);
+    border: 1px solid #C3CAD4;
+    box-shadow: none;
+    cursor: not-allowed;
+    transform: none;
+    filter: none;
+    opacity: 0.75;
 }
 
-.fbt button.delLic:disabled {
-    opacity: 0.5;
-    cursor: default;
-}
-.fbt button.saveLic {
-    appearance: none;
-    -webkit-appearance: none;
+#fbe-ready.disabled .fbe-btn-text { color: #6B7280; }
 
-    display: inline-block;
+/* stop button (running popup) */
+#fbe-stopit .fbe-btn {
+    background: linear-gradient(180deg, #FF7A6E 0%, #EF4444 55%, #DC2626 100%);
+    border: 1px solid #B91C1C;
+    box-shadow: 0 6px 16px -4px rgba(220, 38, 38, 0.55),
+                inset 0 1px 0 rgba(255, 255, 255, 0.28);
+    border-radius: 999px;
+    padding: 9px 26px;
+}
+
+#fbe-stopit .fbe-btn:hover {
+    box-shadow: 0 10px 22px -6px rgba(220, 38, 38, 0.65),
+                inset 0 1px 0 rgba(255, 255, 255, 0.28);
+}
+
+/* small inline buttons ("show less", etc.) */
+#fbe-showlessingo .fbe-btn,
+#fbe-next-post .fbe-btn {
     padding: 6px 16px;
-
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 1;
-
-    color: #fff;
-    background: #2e7d32;
-    border: 1px solid #1b5e20;
-    border-radius: 4px;
-
-    cursor: pointer;
-    text-align: center;
-
-    box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+    border-radius: 999px;
+    background: #EEF2F8;
+    border: 1px solid #D5DCE8;
+    box-shadow: none;
 }
 
-.fbt button.saveLic:hover {
-    background: #27692a;
+#fbe-showlessingo .fbe-btn-text,
+#fbe-next-post .fbe-btn-text {
+    color: #374151;
+    font-size: 12.5px;
 }
 
-.fbt button.saveLic:active {
-    background: #1b5e20;
-    transform: translateY(1px);
-}
-
-.fbt button.saveLic:disabled {
-    opacity: 0.5;
-    cursor: default;
-}
-.fbt input[type="text"]{
-    appearance: none;
-    -webkit-appearance: none;
-
-    border: 1px solid #ccc;
-    background: #fff;
-    color: #000;
-
-    padding: 4px 6px;
-    border-radius: 3px;
-
-    font-size: 14px;
-    line-height: 1.2;
-
-    outline: none;
-}
-.fbt input[type="number"] {
-    border: 1px solid #ccc;
-    background: #fff;
-}
-.fbe-btn:hover {
-    transition: 200ms cubic-bezier(0.08, 0.52, 0.52, 1) background-color, 200ms cubic-bezier(0.08, 0.52, 0.52, 1) box-shadow, 200ms cubic-bezier(0.08, 0.52, 0.52, 1) transform;
+#fbe-showlessingo .fbe-btn:hover,
+#fbe-next-post .fbe-btn:hover {
+    background: #E2E8F2;
+    transform: none;
+    box-shadow: none;
 }
 
 .fbe-btn-inactive {
-    background: #bbb;
-    border: 1px solid #aaa;
-    box-shadow: 0px 0px 1px #bbb;
+    background: #DDE2E9;
+    border: 1px solid #C3CAD4;
+    box-shadow: none;
 }
 
+/* ================================================================
+   Form controls
+   ================================================================ */
+.fbt input[type="text"],
+.fbt input[type="number"],
+.fbt select {
+    border: 1px solid #CBD5E1;
+    background: #fff;
+    color: #111827;
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-family: 'Roboto', 'Segoe UI', Tahoma, sans-serif;
+    font-size: 13.5px;
+    line-height: 1.3;
+    outline: none;
+    vertical-align: middle;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.fbt input[type="text"]:focus,
+.fbt input[type="number"]:focus,
+.fbt select:focus {
+    border-color: #1877F2;
+    box-shadow: 0 0 0 3px rgba(24, 119, 242, 0.22);
+}
+
+.fbt select {
+    cursor: pointer;
+    padding-right: 26px;
+}
+
+/* ================================================================
+   Status / notice strips
+   ================================================================ */
+.warning-notification {
+    border: 1px solid #BFDBFE;
+    background: #EFF6FF;
+    margin-bottom: 12px;
+    color: #1E40AF;
+    padding: 9px 13px;
+    font-weight: 600;
+    font-size: 13px;
+    text-align: left;
+    border-radius: 10px;
+}
+
+.licDiv {
+    border: 1px solid #E3E8EF;
+    background: #F8FAFF;
+    margin-bottom: 12px;
+    padding: 10px 14px;
+    border-radius: 10px;
+    text-align: left;
+    font-size: 13px;
+}
+
+#paidAlready {
+    display: none;
+    border: 1px solid #E3E8EF;
+    background: #F8FAFF;
+    padding: 8px 12px;
+    border-radius: 10px;
+}
+
+#fp_att { display: none; }
+
+.saveLic, .delLic {
+    padding: 6px 16px;
+    margin: 0 10px;
+    border-radius: 999px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.saveLic.wide {
+    padding: 6px 30px;
+    margin: 0 10px;
+    font-size: 1.05em;
+}
+
+.fbt .red, #add-all-div-swmulti .red { color: #DC2626; }
+.fbt .green, #add-all-div-swmulti .green { color: #059669; }
+
+.borderLic {
+    border: 1px solid #E3E8EF;
+    background: #F8FAFF;
+    padding: 8px 12px;
+    text-align: left;
+    margin: 12px 0 6px;
+    border-radius: 10px;
+}
+
+#licDivTitle {
+    color: #DC2626;
+    font-weight: 700;
+}
+
+/* ================================================================
+   Legacy info / status layout (kept for older code paths)
+   ================================================================ */
 .fbe-btn-main {
-    border-radius: 35px;
+    border-radius: 50%;
     float: left;
     height: 70px;
     margin-left: 7px;
@@ -302,13 +485,13 @@ display: inline-block;
     border-right: 6px solid #FFF;
     height: 30px;
     margin: 19px 0 0 24px;
-    width: 0px;
+    width: 0;
 }
 
 .fbe-time {
     font-size: 16px;
     float: right;
-    color: #AAA;
+    color: #6B7280;
     margin: 55px 0 0 185px;
     padding: 0 5px;
     position: absolute;
@@ -325,22 +508,23 @@ display: inline-block;
 }
 
 .fbe-invites-count {
-    color: #00897B;
-    font-size: 64px;
+    color: #0E9F6E;
+    font-size: 56px;
     font-weight: 700;
     padding: 10px 5px 29px;
-    text-shadow: 0px 0px 2px #AAA;
+    line-height: 1;
 }
 
 .fbe-invites-label {
-    color: #AAA;
-    font-size: 22px;
+    color: #6B7280;
+    font-size: 20px;
+    font-weight: 600;
 }
 
 .fbe-info-box {
-    color: #999;
+    color: #6B7280;
     font-size: 13px;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.03em;
     margin-top: 5px;
 }
 
@@ -359,90 +543,280 @@ display: inline-block;
 }
 
 .fbe-status {
-    background: #e3e3e3;
+    background: #EEF2F8;
     clear: both;
-    color: #00695C;
-    font-size: 12px;
-    height: 20px;
-    margin: 95px -30px 0;
-    letter-spacing: 0.05em;
+    color: #123C7C;
+    font-size: 12.5px;
+    height: auto;
+    margin: 24px -22px 0;
+    letter-spacing: 0.03em;
     overflow: hidden;
-    padding: 7px 40px;
+    padding: 9px 26px;
+    text-align: left;
+    border-top: 1px solid #E3E8EF;
+}
+
+.fbe-status-label { font-weight: 700; }
+
+.fbe-status-active {
+    background: linear-gradient(90deg, #EFF6FF, #E7F0FE);
+    color: #1266D6;
+}
+
+/* ================================================================
+   Running popup (#add-all-div-sw) — overrides the inline styles
+   ================================================================ */
+#add-all-div-sw {
+    width: 680px !important;
+    max-width: 94vw !important;
+    left: 50% !important;
+    margin: 0 !important;
+    transform: translateX(-50%) !important;
+    top: 16px !important;
+    border: 0 !important;
+    border-radius: 18px !important;
+    background: rgba(255, 255, 255, 0.97) !important;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 24px 60px -12px rgba(9, 18, 38, 0.4),
+                0 0 0 1px rgba(15, 23, 42, 0.06) !important;
+    font-size: 15px !important;
+    padding: 14px 24px 18px !important;
+    font-family: 'Roboto', 'Segoe UI', Tahoma, sans-serif !important;
+    line-height: 1.55 !important;
+    color: #1F2937 !important;
+    animation: fbe-pop 0.25s ease;
+}
+
+#add-all-div-sw #runModeText {
+    color: #1877F2 !important;
+    font-weight: 800;
+    font-size: 1.02em;
+    letter-spacing: 0.01em;
+}
+
+#add-all-div-sw #invite-all-count-sw {
+    color: #0B1F3F;
+    font-weight: 800;
+    font-size: 1.1em;
+}
+
+#add-all-div-sw .btn-div { margin-top: 8px; }
+
+/* ================================================================
+   Progress banner shown on other tabs (#fb-progress-bar)
+   ================================================================ */
+#fb-progress-bar {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2147483647;
+    font-family: 'Roboto', 'Segoe UI', Tahoma, sans-serif;
+}
+
+#fb-progress-bar #fb-notification {
+    position: relative;
+    background: linear-gradient(120deg, #0B1F3F 0%, #123C7C 55%, #1877F2 100%);
+    border-radius: 0 0 16px 16px;
+    box-shadow: 0 14px 34px -10px rgba(9, 18, 38, 0.55);
+    padding: 10px 42px 10px 18px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    color: #fff;
+    font-size: 13px;
+    line-height: 1.45;
+    max-width: 80vw;
+}
+
+#fb-progress-bar .fb-logo {
+    color: #fff;
+    font-weight: 700;
+    font-size: 13px;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+#fb-progress-bar .progress-bar {
+    position: relative;
+    flex: 0 0 200px;
+    height: 8px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+#fb-progress-bar .progress-bar:before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 999px;
+    background: linear-gradient(90deg, #2C8CFF 0%, #7FB5FF 50%, #2C8CFF 100%);
+    background-size: 200% 100%;
+    animation: fbe-shimmer 1.5s linear infinite;
+}
+
+@keyframes fbe-shimmer {
+    0%   { background-position: 0% 0; }
+    100% { background-position: -200% 0; }
+}
+
+#fb-progress-bar .fb-close {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 18px;
+    text-align: center;
+    cursor: pointer;
+    opacity: 0.85;
+    transition: opacity 0.15s ease, background 0.15s ease;
+}
+
+#fb-progress-bar .fb-close:hover {
+    opacity: 1;
+    background: rgba(255, 255, 255, 0.18);
+}
+
+#fb-progress-bar .fb-close:before { content: "×"; }
+
+/* ================================================================
+   Final / error dialog (#add-all-div-swmulti)
+   ================================================================ */
+#add-all-div-swmulti > div {
+    width: 540px !important;
+    max-width: 94vw !important;
+    left: 50% !important;
+    top: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    margin: 0 auto !important;
+}
+
+#add-all-div-swmulti > div > div {
+    border: 0 !important;
+    border-radius: 20px !important;
+    overflow: hidden;
+    box-shadow: 0 32px 80px -16px rgba(9, 18, 38, 0.6) !important;
+    background: #fff;
+}
+
+#add-all-div-swmulti > div > div > div {
+    border-radius: 20px !important;
+    overflow: hidden;
+}
+
+/* dialog header bar */
+#add-all-div-swmulti div[style*="6d84b4"] {
+    background: linear-gradient(120deg, #0B1F3F 0%, #123C7C 55%, #1877F2 100%) !important;
+    border: 0 !important;
+    padding: 13px 18px !important;
+    color: #fff !important;
+    font-size: 15px !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.01em;
+    font-family: 'Roboto', 'Segoe UI', Tahoma, sans-serif !important;
+}
+
+/* dialog body */
+#add-all-div-swmulti div[style$="border-width: 0 1px;"] {
+    border: 0 !important;
+    padding: 18px 20px !important;
+    font-size: 14px !important;
+    line-height: 1.6 !important;
+    color: #1F2937 !important;
+    font-family: 'Roboto', 'Segoe UI', Tahoma, sans-serif !important;
+    background: #fff !important;
     text-align: left;
 }
 
-.fbe-status-label {
-    font-weight: 700;
+#add-all-div-swmulti div[style$="border-width: 0 1px;"] a {
+    color: #1877F2;
+    text-decoration: none;
 }
 
-.fbe-status-active {
-    background: #B2DFDB;
-}
-.red-title{
-color:red;text-align:center;
-font-size: 1.5em;
-font-weight: bold;
-}
-.margin-top{
-margin-top:20px;
-}
-.fbe-btn.disabled{
-opacity: 0.3;
-}
-.fbe-intro.imgdisp a img {
-width: 100%;height: auto;display: none;
+#add-all-div-swmulti div[style$="border-width: 0 1px;"] a:hover {
+    text-decoration: underline;
 }
 
-
-#fp_att{
-display: none;
+/* dialog footer wrapper */
+#add-all-div-swmulti div[style$="border-bottom-width: 1px;"] {
+    border: 0 !important;
 }
 
-
-.licDiv{
-border: 2px solid red;
-background: aliceblue;
-margin-bottom: 10px;
-padding: 5px 10px;
+#FBIAB {
+    background: #F7F9FC !important;
+    border: 0 !important;
+    border-top: 1px solid #E3E8EF !important;
+    padding: 12px 16px !important;
+    text-align: right !important;
 }
 
-#paidAlready{
-display: none;
-border: 1px solid;
-padding: 5px 10px;
-}
-.saveLic,.delLic{
-padding: 5px 15px;
-margin: 0px 10px;
-}
-.saveLic.wide{
-padding: 5px 30px;
-margin: 0px 10px;
-font-size: 1.1em;
-/*color: green;*/
-}
-.red{
-color:red;
-}
-.green{
-color:green;
+#FBIAB a {
+    margin-left: 8px !important;
 }
 
-.borderLic{
-border: 1px solid;
-padding: 5px 10px;
-text-align:left;
-margin: 10px 0 5px;
+#FBIAB a._42fu {
+    display: inline-block !important;
+    height: auto !important;
+    line-height: 1.4 !important;
+    padding: 9px 18px !important;
+    border-radius: 999px !important;
+    border: 1px solid #D5DCE8 !important;
+    background: #fff !important;
+    background-image: none !important;
+    box-shadow: none !important;
+    color: #1F2937 !important;
+    font-family: 'Roboto', 'Segoe UI', Tahoma, sans-serif !important;
+    font-size: 13px !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.01em;
+    cursor: pointer;
+    text-decoration: none !important;
+    transition: border-color 0.15s ease, color 0.15s ease, transform 0.15s ease;
 }
-#licDivTitle{
-color:red;
-font-weight: bold;
+
+#FBIAB a._42fu:hover {
+    border-color: #1877F2 !important;
+    color: #1877F2 !important;
 }
-.warning-notification{
-border: 2px solid #2bd900;
-background: #ffffff;
-margin-bottom: 10px;
-color: black;
-padding: 5px 10px;
-font-weight: bold;
+
+/* primary CTAs in the footer (review button + "view all scripts") */
+#FBIAB a._42g-,
+#FBIAB a[href="https://www.invitelikecomment.com"] {
+    background: linear-gradient(180deg, #2C8CFF 0%, #1266D6 100%) !important;
+    border: 1px solid #0E5FCB !important;
+    color: #fff !important;
+    box-shadow: 0 6px 16px -6px rgba(24, 119, 242, 0.55) !important;
+}
+
+#FBIAB a._42g-:hover,
+#FBIAB a[href="https://www.invitelikecomment.com"]:hover {
+    color: #fff !important;
+    border-color: #0E5FCB !important;
+    filter: brightness(1.08);
+}
+
+/* ================================================================
+   Small screens
+   ================================================================ */
+@media (max-width: 700px) {
+    .fbt {
+        right: 16px;
+        left: 16px;
+        width: auto;
+        top: 8px;
+    }
+
+    #add-all-div-sw {
+        width: 94vw !important;
+    }
+
+    #add-all-div-swmulti > div {
+        width: 94vw !important;
+    }
 }
